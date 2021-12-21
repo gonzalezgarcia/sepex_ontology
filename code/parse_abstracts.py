@@ -18,10 +18,13 @@ import json
 import nltk
 import pdfplumber
 from wordcloud import WordCloud, STOPWORDS
+import pandas as pd
+from cognitiveatlas.api import get_concept
+
 
 # Where are we?
-os.chdir(os.path.dirname(sys.argv[0]))
-
+#os.chdir(os.path.dirname(sys.argv[0])) # not working for me (carlos)
+root = "/Users/carlos/Documents/GitHub/sepex_ontology/"
 ###### Poldrack's functions
 # Functions to parse text
 def remove_nonenglish_chars(text):
@@ -77,7 +80,7 @@ def do_stem(words,return_unique=False,remove_non_english_words=True):
 ######
 # Remove unwanted words
 def remove_irrelevant_words(text):
-    irrelevant_list = list(("abstracts", "sepex", "sepneca", "congreso"))
+    irrelevant_list = list(("universidad","abstracts", "sepex", "sepneca", "congreso"))
     for i, val in enumerate(irrelevant_list):
         text = re.sub(val, "", text)
     return text
@@ -98,17 +101,56 @@ def read_abstracts(year):
     # Concatenate pages
     text = " ".join(text)
     return text
+
+
+# Prepare feature data frame
+def search_cogat(input_text):
+    features = pandas.DataFrame(columns=concepts.values())
+    # search for each cognitive atlas term, take a count
+    for concept in features.columns:
+        processed_concept = " ".join(processText(str(concept)))
+        features.loc[0,concept] = len(re.findall(processed_concept,input_text))
+    #print("Found %s total occurrences for %s" %(features.loc[pid].sum(),pid))            
+    return features.T
+
+
+
     
 # Read in abstracts
-words = read_abstracts(2014)
+abstracts = read_abstracts(2014)
 
-# Create word cloud
-wordcloud = WordCloud().generate(words)
+# Get all cognitive atlas concepts
+all_concepts = get_concept().json
+concepts = dict()
+for concept in all_concepts:
+    concepts[concept["id"]] = str(concept["name"])
+    
+#get prevalence of cogat concepts in sepex 2018
+prevalence = search_cogat(abstracts)
+# remove rows with zeros (concepts that don't appear in WJ)
+prevalence_any = prevalence[prevalence[0] != 0]
 
-#plot the WordCloud image                      
-plt.figure(figsize = (8, 8), facecolor = None)
-plt.imshow(wordcloud)
+# compute overlap between cognitive atlas and william james
+overlap = len(prevalence_any) / len(prevalence)
+
+print("Overlap between CogAtlas and SEPEX 2014: " + (str(overlap)))
+
+word_list = prevalence_any.index
+
+text = str(' ')
+
+for idx,word in enumerate(word_list):
+    word = word + ' '
+    text += word * int(prevalence_any[0][idx])
+    #print(word, prevalence_any[idx])
+
+
+wordcloud = WordCloud(background_color="white",
+                      collocations=False).generate(text)
+
+# Display the generated image:
+# the matplotlib way:
+plt.figure(figsize=(4,4), dpi=1200)
+plt.imshow(wordcloud, interpolation='bilinear')
 plt.axis("off")
-plt.tight_layout(pad = 0)
- 
-plt.show()
+plt.savefig(root + 'figures/cogat_sepex14_cloud.png')
