@@ -80,7 +80,11 @@ def do_stem(words,return_unique=False,remove_non_english_words=True):
 ######
 # Remove unwanted words
 def remove_irrelevant_words(text):
-    irrelevant_list = list(("abstracts", "sepex", "sepneca", "congreso", "2014", "2016", "2018", "1", "2", "3", "4", "5", "6", "7", "8", "9"))
+    irrelevant_list = list(("abstracts", "sepex", "sepneca", "congreso", "poster", "july", "word", "ac", "uk",
+                            "participants", "participant", "university", "result", "results", "showed", "whether",
+                            "experiments", "task", "effect", "group", "different", "condition", "s", "experiment",
+                            "2013", "2014", "2015", "2016", "2017", "2018", "using", "one", "study", "difference",
+                            "1", "2", "3", "4", "5", "6", "7", "8", "9"))
     for i, val in enumerate(irrelevant_list):
         text = re.sub(val, "", text)
     return text
@@ -89,9 +93,10 @@ def central_words(text):
     doc = nlp(text) 
     central_words = list()
     for sent in doc.sentences: 
-        for dep in sent.dependencies: 
-            if dep[1] == 'root' or dep[1] == 'nsubj' or dep[1]== 'flat': 
-                central_words.append(dep[2].text)
+        for tok in sent.tokens: 
+            for word in tok.words:
+                if word.upos == 'NOUN': 
+                    central_words.append(word.text)
     return central_words
 
 # Function to read in pdf page by page
@@ -106,17 +111,17 @@ def read_abstracts(year):
         # page_text = remove_irrelevant_words(page_text)
         # Use NLP to locate relevant words
         #page_text = central_words(page_text)
-        text.append(central_words(page_text))
+        temp = central_words(page_text)
+        text = text + temp
         
     # Concatenate pages
     text = " ".join(text)
     return text
-ascas
+
 # Read in abstracts
-words = read_abstracts(2014)
+words = read_abstracts(2016)
 
-
-
+words = remove_irrelevant_words(words)
 # Create word cloud
 wordcloud = WordCloud().generate(words)
 
