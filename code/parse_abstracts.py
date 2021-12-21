@@ -86,24 +86,29 @@ def remove_irrelevant_words(text):
 # Function to read in pdf page by page
 def read_abstracts(year):
     pdf = pdfplumber.open(('../abstracts/sepex_' +  str(year) + '.pdf'))
-    page = pdf.pages[3]
-    words = processText(page.extract_text())
-    text = " ".join(words)
-    text = remove_irrelevant_words(text)
+    text = list() 
+    #print("Parsing paragraph %s, %s of %s" %(pid,count,len(paragraphs)))
+    for i, page in enumerate(pdf.pages):
+        print("Reading page %s out of %s" %(i, len(pdf.pages)))
+        words = processText(page.extract_text())
+        page_text = " ".join(words)
+        page_text = remove_irrelevant_words(page_text)
+        text.append(page_text)
+        
+    # Concatenate pages
+    text = " ".join(text)
     return text
     
+# Read in abstracts
 words = read_abstracts(2014)
 
-print(words)
-#wordcloud = WordCloud(width = 800, height = 800,
-                background_color ='white',
-                stopwords = stopwords,
-                min_font_size = 10).generate(words)
+# Create word cloud
+wordcloud = WordCloud().generate(words)
+
+#plot the WordCloud image                      
+plt.figure(figsize = (8, 8), facecolor = None)
+plt.imshow(wordcloud)
+plt.axis("off")
+plt.tight_layout(pad = 0)
  
-# plot the WordCloud image                      
-#plt.figure(figsize = (8, 8), facecolor = None)
-#plt.imshow(wordcloud)
-#plt.axis("off")
-#plt.tight_layout(pad = 0)
- 
-#plt.show()
+plt.show()
