@@ -9,4 +9,4 @@ To-do list:
 - Select prominent concepts over the years (i.e., SEPEX ontology)
 - Assess overlap with classical writings in Psychology and with cognitive atlas. 
 Perhaps, we could have a 3x3  matrix with SEPEX - Cognitive Atlas - William James and % overlap as DV
-- visualize prominent concepts in SEPEX, CA and WJ. Maybe word cloud?
+- visualize prominent concepts in SEPEX, CA and WJ. Maybe word cloud??
