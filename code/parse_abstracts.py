@@ -92,7 +92,7 @@ def read_abstracts(year):
     text = list() 
     #print("Parsing paragraph %s, %s of %s" %(pid,count,len(paragraphs)))
     for i, page in enumerate(pdf.pages):
-        print("Reading page %s out of %s" %(i, len(pdf.pages)))
+        #print("Reading page %s out of %s" %(i, len(pdf.pages)))
         words = processText(page.extract_text())
         page_text = " ".join(words)
         page_text = remove_irrelevant_words(page_text)
@@ -105,6 +105,11 @@ def read_abstracts(year):
 
 # Prepare feature data frame
 def search_cogat(input_text):
+    # Get all cognitive atlas concepts
+    all_concepts = get_concept().json
+    concepts = dict()
+    for concept in all_concepts:
+        concepts[concept["id"]] = str(concept["name"])
     features = pandas.DataFrame(columns=concepts.values())
     # search for each cognitive atlas term, take a count
     for concept in features.columns:
@@ -113,44 +118,27 @@ def search_cogat(input_text):
     #print("Found %s total occurrences for %s" %(features.loc[pid].sum(),pid))            
     return features.T
 
+def search_dsm(input_text):
+    dsm = open("../data/lexicon_dsm.txt", "r").readlines()
+    dsm = [x[:-1] for x in dsm] # remove blank space \n
+    features = pandas.DataFrame(columns=dsm)
+    # search for each dsm term, take a count
+    for concept in features.columns:
+        processed_concept = " ".join(processText(str(concept)))
+        features.loc[0,concept] = len(re.findall(processed_concept,input_text))
+    #print("Found %s total occurrences for %s" %(features.loc[pid].sum(),pid))            
+    return features.T
+
+def search_rdoc(input_text):
+    dsm = open("../data/lexicon_rdoc.txt", "r").readlines()
+    dsm = [x[:-1] for x in dsm] # remove blank space \n
+    features = pandas.DataFrame(columns=dsm)
+    # search for each dsm term, take a count
+    for concept in features.columns:
+        processed_concept = " ".join(processText(str(concept)))
+        features.loc[0,concept] = len(re.findall(processed_concept,input_text))
+    #print("Found %s total occurrences for %s" %(features.loc[pid].sum(),pid))            
+    return features.T
 
 
     
-# Read in abstracts
-abstracts = read_abstracts(2014)
-
-# Get all cognitive atlas concepts
-all_concepts = get_concept().json
-concepts = dict()
-for concept in all_concepts:
-    concepts[concept["id"]] = str(concept["name"])
-    
-#get prevalence of cogat concepts in sepex 2018
-prevalence = search_cogat(abstracts)
-# remove rows with zeros (concepts that don't appear in WJ)
-prevalence_any = prevalence[prevalence[0] != 0]
-
-# compute overlap between cognitive atlas and william james
-overlap = len(prevalence_any) / len(prevalence)
-
-print("Overlap between CogAtlas and SEPEX 2014: " + (str(overlap)))
-
-word_list = prevalence_any.index
-
-text = str(' ')
-
-for idx,word in enumerate(word_list):
-    word = word + ' '
-    text += word * int(prevalence_any[0][idx])
-    #print(word, prevalence_any[idx])
-
-
-wordcloud = WordCloud(background_color="white",
-                      collocations=False).generate(text)
-
-# Display the generated image:
-# the matplotlib way:
-plt.figure(figsize=(4,4), dpi=1200)
-plt.imshow(wordcloud, interpolation='bilinear')
-plt.axis("off")
-plt.savefig(root + 'figures/cogat_sepex14_cloud.png')

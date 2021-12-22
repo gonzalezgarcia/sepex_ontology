@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 root = "/Users/carlos/documents/GitHub/sepex_ontology/"
 
 # Read the whole text.
-df = pd.read_csv(root + 'cogat_features.tsv',sep='\t')
+df = pd.read_csv(root + 'data/cogat_features.tsv',sep='\t')
 df = df.drop('Unnamed: 0', 1) # clean up
 
 prevalence = df.sum()
@@ -46,4 +46,4 @@ wordcloud = WordCloud(background_color="white",
 plt.figure(figsize=(4,4), dpi=1200)
 plt.imshow(wordcloud, interpolation='bilinear')
 plt.axis("off")
-plt.savefig('cogat_wj_cloud.png')
+plt.savefig(root +'figures/cogat_wj_cloud.png')

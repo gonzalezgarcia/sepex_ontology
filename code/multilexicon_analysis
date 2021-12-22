@@ -1,0 +1,66 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Dec 22 14:40:45 2021
+
+@author: carlos
+"""
+
+import pandas as pd
+from wordcloud import WordCloud
+import matplotlib.pyplot as plt
+import parse_abstracts
+from parse_abstracts import read_abstracts
+from parse_abstracts import search_cogat
+from parse_abstracts import search_dsm
+from parse_abstracts import search_rdoc
+
+root = "/Users/carlos/Documents/GitHub/sepex_ontology/"
+
+sepex_year = 2012
+
+# Read in abstracts
+abstracts = read_abstracts(sepex_year)
+
+# SEARCH IN COGNITIVE ATLAS LEXICON
+cogat_prevalence = search_cogat(abstracts) # get prevalence of cogat concepts in sepex abstracts
+cogat_prevalence_any = cogat_prevalence[cogat_prevalence[0] != 0] # remove rows with zeros (concepts that don't appear in SEPEX abstracts)
+cogat_overlap = len(cogat_prevalence_any) / len(cogat_prevalence) # compute overlap between cognitive atlas and SEPEX abstracts
+print("Overlap between CogAtlas and SEPEX" + str(sepex_year) + ": " + (str(cogat_overlap)))
+
+# SEARCH IN DSM LEXICON
+dsm_prevalence = search_dsm(abstracts) # get prevalence of cogat concepts in sepex abstracts
+dsm_prevalence_any = dsm_prevalence[dsm_prevalence[0] != 0] # remove rows with zeros (concepts that don't appear in SEPEX abstracts)
+dsm_overlap = len(dsm_prevalence_any) / len(dsm_prevalence) # compute overlap between cognitive atlas and SEPEX abstracts
+print("Overlap between DSM and SEPEX" + str(sepex_year) + ": " + (str(dsm_overlap)))
+
+# SEARCH IN RDOC LEXICON
+rdoc_prevalence = search_rdoc(abstracts) # get prevalence of cogat concepts in sepex abstracts
+rdoc_prevalence_any = rdoc_prevalence[rdoc_prevalence[0] != 0] # remove rows with zeros (concepts that don't appear in SEPEX abstracts)
+rdoc_overlap = len(rdoc_prevalence_any) / len(rdoc_prevalence) # compute overlap between cognitive atlas and SEPEX abstracts
+print("Overlap between RDoc and SEPEX" + str(sepex_year) + ": " + (str(rdoc_overlap)))
+
+
+
+# # TAG CLOUDS
+
+
+# word_list = cogat_prevalence_any.index
+
+# text = str(' ')
+
+# for idx,word in enumerate(word_list):
+#     word = word + ' '
+#     text += word * int(cogat_prevalence_any[0][idx])
+#     #print(word, prevalence_any[idx])
+
+
+# wordcloud = WordCloud(background_color="white",
+#                       collocations=False).generate(text)
+
+# # Display the generated image:
+# # the matplotlib way:
+# plt.figure(figsize=(4,4), dpi=1200)
+# plt.imshow(wordcloud, interpolation='bilinear')
+# plt.axis("off")
+# plt.savefig(root + 'figures/cogat_sepex12_cloud.png')
