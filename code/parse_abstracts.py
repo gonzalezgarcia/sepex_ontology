@@ -118,10 +118,10 @@ def search_cogat(input_text):
     #print("Found %s total occurrences for %s" %(features.loc[pid].sum(),pid))            
     return features.T
 
-def search_dsm(input_text):
-    dsm = open("../data/lexicon_dsm.txt", "r").readlines()
-    dsm = [x[:-1] for x in dsm] # remove blank space \n
-    features = pandas.DataFrame(columns=dsm)
+def search_lexicon(input_text,lexicon):
+    lex_txt = open("../data/" + lexicon + ".txt", "r").readlines()
+    lex_txt = [x[:-1] for x in lex_txt] # remove blank space \n
+    features = pandas.DataFrame(columns=lex_txt)
     # search for each dsm term, take a count
     for concept in features.columns:
         processed_concept = " ".join(processText(str(concept)))
@@ -129,16 +129,7 @@ def search_dsm(input_text):
     #print("Found %s total occurrences for %s" %(features.loc[pid].sum(),pid))            
     return features.T
 
-def search_rdoc(input_text):
-    dsm = open("../data/lexicon_rdoc.txt", "r").readlines()
-    dsm = [x[:-1] for x in dsm] # remove blank space \n
-    features = pandas.DataFrame(columns=dsm)
-    # search for each dsm term, take a count
-    for concept in features.columns:
-        processed_concept = " ".join(processText(str(concept)))
-        features.loc[0,concept] = len(re.findall(processed_concept,input_text))
-    #print("Found %s total occurrences for %s" %(features.loc[pid].sum(),pid))            
-    return features.T
+
 
 
     
