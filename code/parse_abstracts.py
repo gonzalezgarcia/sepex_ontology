@@ -7,25 +7,28 @@ This is a temporary script file.
 # Import stuff
 import os
 import sys
-import numpy as np
+# import numpy as np
 import re
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 from nltk.corpus import stopwords
-from nltk.stem.porter import *
-from nltk.stem import *
+# from nltk.stem.porter import *
+# from nltk.stem import *
 import pandas
-import json
+# import json
 import nltk
 import pdfplumber
 from wordcloud import WordCloud, STOPWORDS
-import pandas as pd
+# import pandas as pd
 from cognitiveatlas.api import get_concept
 from googletrans import Translator
 translator = Translator()
 
 # Where are we?
-#os.chdir(os.path.dirname(sys.argv[0])) # not working for me (carlos)
-root = "/Users/carlos/Documents/GitHub/sepex_ontology/"
+try:
+    os.chdir(os.path.dirname(sys.argv[0])) # not working for me (carlos)
+except:
+    root = "/Users/carlos/Documents/GitHub/sepex_ontology/"
+    
 ###### Poldrack's functions
 # Functions to parse text
 def remove_nonenglish_chars(text):
