@@ -20,7 +20,8 @@ import pdfplumber
 from wordcloud import WordCloud, STOPWORDS
 import pandas as pd
 from cognitiveatlas.api import get_concept
-
+from googletrans import Translator
+translator = Translator()
 
 # Where are we?
 #os.chdir(os.path.dirname(sys.argv[0])) # not working for me (carlos)
@@ -28,7 +29,7 @@ root = "/Users/carlos/Documents/GitHub/sepex_ontology/"
 ###### Poldrack's functions
 # Functions to parse text
 def remove_nonenglish_chars(text):
-    return re.sub("[^a-zA-Z]", " ", text)
+    return re.sub("[^a-zA-Z]ñ", " ", text)
     
 def text2sentences(text,remove_non_english_chars=True):
     tokenizer = nltk.data.load('tokenizers/punkt/english.pickle')    
@@ -55,32 +56,36 @@ def sentence2words(sentence,remove_stop_words=True,lower=True):
         words = [w for w in words if w not in stop_words]
     return words
 
-def do_stem(words,return_unique=False,remove_non_english_words=True):
-    '''do_stem
-    Parameters
-    ==========    
-    words: str/list
-        one or more words to be stemmed
-    return_unique: boolean (default True)
-        return unique terms
-    '''
-    stemmer = PorterStemmer()
-    if isinstance(words,str):
-        words = [words]
-    stems = []
-    for word in words:
-        if remove_non_english_words:
-            word = re.sub("[^a-zA-Z]", " ", word)
-        stems.append(stemmer.stem(word))
-    if return_unique:
-        return numpy.unique([s.lower() for s in stems]).tolist()
-    else:
-        return stems
+def en2es(input_text):
+    temp = translator.translate(text = input_text, src = 'es', dest = 'en')
+    return temp.text
+
+# def do_stem(words,return_unique=False,remove_non_english_words=True):
+#     '''do_stem
+#     Parameters
+#     ==========    
+#     words: str/list
+#         one or more words to be stemmed
+#     return_unique: boolean (default True)
+#         return unique terms
+#     '''
+#     stemmer = PorterStemmer()
+#     if isinstance(words,str):
+#         words = [words]
+#     stems = []
+#     for word in words:
+#         if remove_non_english_words:
+#             word = re.sub("[^a-zA-Z]", " ", word)
+#         stems.append(stemmer.stem(word))
+#     if return_unique:
+#         return numpy.unique([s.lower() for s in stems]).tolist()
+#     else:
+#         return stems
 
 ######
 # Remove unwanted words
 def remove_irrelevant_words(text):
-    irrelevant_list = list(("universidad","abstracts", "sepex", "sepneca", "congreso"))
+    irrelevant_list = list(("abstracts", "sepex", "sepneca", "congreso"))
     for i, val in enumerate(irrelevant_list):
         text = re.sub(val, "", text)
     return text
@@ -92,10 +97,13 @@ def read_abstracts(year):
     text = list() 
     #print("Parsing paragraph %s, %s of %s" %(pid,count,len(paragraphs)))
     for i, page in enumerate(pdf.pages):
-        #print("Reading page %s out of %s" %(i, len(pdf.pages)))
+        # print("Reading page %s out of %s" %(i, len(pdf.pages)))
         words = processText(page.extract_text())
         page_text = " ".join(words)
         page_text = remove_irrelevant_words(page_text)
+        
+        # Translate into English
+        page_text = en2es(page_text)
         text.append(page_text)
         
     # Concatenate pages
