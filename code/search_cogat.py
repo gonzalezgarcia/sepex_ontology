@@ -90,4 +90,6 @@ for pid,paragraph in paragraphs.items():
         print("No text found for paragraph %s" %(pid))
         features.loc[pid] = numpy.zeros(len(concepts))
 
-features.to_csv("cogat_features.tsv",sep="\t")
+# Save to file
+out_dir = root_dir + "data/"
+features.to_csv(out_dir + "cogat_features.tsv",sep="\t")

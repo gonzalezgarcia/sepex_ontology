@@ -56,6 +56,7 @@ for idx,sepex_year in enumerate(sepex_editions):
     print("Overlap between CogAtlas-DISORDERS and SEPEX" + str(sepex_year) + ": " + (str(cogat_overlap)))
     overlap.loc[idx,"disorders"] = cogat_overlap
     lexicons_length.append(len(cogat_prevalence))
+    draw_wordclod(cogat_prevalence_any, 'sepex' + str(sepex_year) + '_disorders_cloud')
     
     cogat_prevalence = search_lexicon(abstracts,"cognitive-atlas_concepts") # get prevalence of cogat concepts in sepex abstracts
     cogat_prevalence_any = cogat_prevalence[cogat_prevalence[0] != 0] # remove rows with zeros (concepts that don't appear in SEPEX abstracts)
@@ -63,6 +64,7 @@ for idx,sepex_year in enumerate(sepex_editions):
     print("Overlap between CogAtlas-CONCEPTS and SEPEX" + str(sepex_year) + ": " + (str(cogat_overlap)))
     overlap.loc[idx,"concepts"] = cogat_overlap
     lexicons_length.append(len(cogat_prevalence))
+    draw_wordclod(cogat_prevalence_any, 'sepex' + str(sepex_year) + '_concepts_cloud')
     
     cogat_prevalence = search_lexicon(abstracts,"cognitive-atlas_tasks") # get prevalence of cogat concepts in sepex abstracts
     cogat_prevalence_any = cogat_prevalence[cogat_prevalence[0] != 0] # remove rows with zeros (concepts that don't appear in SEPEX abstracts)
@@ -70,6 +72,7 @@ for idx,sepex_year in enumerate(sepex_editions):
     print("Overlap between CogAtlas-TASKS and SEPEX" + str(sepex_year) + ": " + (str(cogat_overlap)))
     overlap.loc[idx,"tasks"] = cogat_overlap
     lexicons_length.append(len(cogat_prevalence))
+    draw_wordclod(cogat_prevalence_any, 'sepex' + str(sepex_year) + '_tasks_cloud')
     
     # SEARCH IN MD ANATOMY LEXICON
     cogat_prevalence = search_lexicon(abstracts,"NIF-GrossAnatomy") # get prevalence of cogat concepts in sepex abstracts
@@ -78,6 +81,7 @@ for idx,sepex_year in enumerate(sepex_editions):
     print("Overlap between NIF-GrossAnatomy and SEPEX" + str(sepex_year) + ": " + (str(cogat_overlap)))
     overlap.loc[idx,"anatomy"] = cogat_overlap
     lexicons_length.append(len(cogat_prevalence))
+    draw_wordclod(cogat_prevalence_any, 'sepex' + str(sepex_year) + '_anatomy_cloud')
     
     # normalize by corpus size
     weights = [x/sum(lexicons_length) for x in lexicons_length]
@@ -115,25 +119,37 @@ g.set_ylabel("weighted prevalence")
 plt.savefig(root + 'figures_nospanish/w_prevalence.png')
 
 
-# # TAG CLOUDS
+# Word clouds
+# I'm turning this into a function so we can easily plug it for each lexicon
+def draw_wordclod(prevalence_data, fig_name):
+    
+    '''draw_wordclod
+    Input
+    ==========    
+    prevalence_data: dataframe with words as 'index' (row names) and and 
+    prevalence values in the first column
+    fig_name: name of the resulting figure
+    
+    Output
+    ==========    
+    displays and prints figure
+    '''
+    # extract words
+    word_list = prevalence_data.index
+    
+    # put all words into a single variable (needed for the wordcloud)
+    text = str(' ')
+    for idx, word in enumerate(word_list):
+        word = word + ' '
+        text += word * int(prevalence_data[0][idx])
+    
+    # create the wordcloud
+    wordcloud = WordCloud(background_color="white",
+                          collocations=False).generate(text)
 
-
-# word_list = cogat_prevalence_any.index
-
-# text = str(' ')
-
-# for idx,word in enumerate(word_list):
-#     word = word + ' '
-#     text += word * int(cogat_prevalence_any[0][idx])
-#     #print(word, prevalence_any[idx])
-
-
-# wordcloud = WordCloud(background_color="white",
-#                       collocations=False).generate(text)
-
-# # Display the generated image:
-# # the matplotlib way:
-# plt.figure(figsize=(4,4), dpi=1200)
-# plt.imshow(wordcloud, interpolation='bilinear')
-# plt.axis("off")
-# plt.savefig(root + 'figures/cogat_sepex12_cloud.png')
+    # Display the generated image:
+    # the matplotlib way:
+    plt.figure(figsize=(4,4), dpi=1200)
+    plt.imshow(wordcloud, interpolation='bilinear')
+    plt.axis("off")
+    plt.savefig(root + 'figures/' + fig_name + '.png')

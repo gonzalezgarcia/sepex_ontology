@@ -28,6 +28,7 @@ try:
     os.chdir(os.path.dirname(sys.argv[0])) # not working for me (carlos)
 except:
     root = "/Users/carlos/Documents/GitHub/sepex_ontology/"
+    root = "/home/javier/git_repos/sepex_ontology/"
     
 ###### Poldrack's functions
 # Functions to parse text
@@ -87,11 +88,11 @@ def en2es(input_text):
 
 ######
 # Remove unwanted words
-def remove_irrelevant_words(text):
-    irrelevant_list = list(("abstracts", "sepex", "sepneca", "congreso"))
-    for i, val in enumerate(irrelevant_list):
-        text = re.sub(val, "", text)
-    return text
+# def remove_irrelevant_words(text):
+#     irrelevant_list = list(("abstracts", "sepex", "sepneca", "congreso"))
+#     for i, val in enumerate(irrelevant_list):
+#         text = re.sub(val, "", text)
+#     return text
 
 
 # Function to read in pdf page by page
@@ -103,10 +104,10 @@ def read_abstracts(year):
         # print("Reading page %s out of %s" %(i, len(pdf.pages)))
         words = processText(page.extract_text())
         page_text = " ".join(words)
-        page_text = remove_irrelevant_words(page_text)
+        #page_text = remove_irrelevant_words(page_text)
         
         # Translate into English
-        page_text = en2es(page_text)
+        #page_text = en2es(page_text)
         text.append(page_text)
         
     # Concatenate pages

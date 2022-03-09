@@ -12,6 +12,7 @@ import matplotlib.pyplot as plt
 
 # get data directory (using getcwd() is needed to support running example in generated IPython notebook)
 root = "/Users/carlos/documents/GitHub/sepex_ontology/"
+root = "/home/javier/git_repos/sepex_ontology/"
 
 # Read the whole text.
 df = pd.read_csv(root + 'data/cogat_features.tsv',sep='\t')
@@ -27,21 +28,21 @@ overlap = len(prevalence_any) / len(prevalence)
 
 print("Overlap between CogAtlas and WJ's principles: " + (str(overlap)))
 
-
+# get all words that appear in WJ
 word_list = prevalence_any.index
 
+# put all words into a single variable (needed for the wordcloud)
 text = str(' ')
-
 for idx,word in enumerate(word_list):
     word = word + ' '
     text += word * int(prevalence_any[idx])
     #print(word, prevalence_any[idx])
 
-
+# create the wordcloud
 wordcloud = WordCloud(background_color="white",
                       collocations=False).generate(text)
 
-# Display the generated image:
+# Display the generated image and save it:
 # the matplotlib way:
 plt.figure(figsize=(4,4), dpi=1200)
 plt.imshow(wordcloud, interpolation='bilinear')
