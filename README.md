@@ -11,5 +11,5 @@ To-do list:
 - (DONE) ~~Check overlap of SEPEX with cogatlas and other lexicons such as DSM or something more neurosciency~~
 - Assess overlap with classical writings in Psychology and with cognitive atlas. 
 Perhaps, we could have a 3x3  matrix with SEPEX - Cognitive Atlas - William James and % overlap as DV
-- Worldcloud for each lexicon - sepex overlap
+- (DONE) ~~Worldcloud for each lexicon - sepex overlap~~
 - final table with OBSERVATION, POTENTIAL INTERPRETATIONS, POTENTIAL STRATEGIES
