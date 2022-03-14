@@ -9,11 +9,11 @@ Created on Wed Dec 22 14:40:45 2021
 import pandas as pd
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
-import parse_abstracts
 from parse_abstracts import *
 import seaborn as sns
+import numpy as np
 
-# root = "/Users/carlos/Documents/GitHub/sepex_ontology/"
+root = "/Users/carlos/Documents/GitHub/sepex_ontology/"
 
 sepex_editions = [2012,2014,2016,2018]
 lexicons = ["disorders","concepts","tasks","anatomy"]
@@ -28,25 +28,6 @@ for idx,sepex_year in enumerate(sepex_editions):
     print('Reading abstracts ' + str(sepex_year))
     lexicons_length = [] # to compute weighted overlap
     abstracts = read_abstracts(sepex_year)
-    
-    # # SEARCH IN COGNITIVE ATLAS LEXICON
-    # cogat_prevalence = search_cogat(abstracts) # get prevalence of cogat concepts in sepex abstracts
-    # cogat_prevalence_any = cogat_prevalence[cogat_prevalence[0] != 0] # remove rows with zeros (concepts that don't appear in SEPEX abstracts)
-    # cogat_overlap = len(cogat_prevalence_any) / len(cogat_prevalence) # compute overlap between cognitive atlas and SEPEX abstracts
-    # print("Overlap between CogAtlas and SEPEX" + str(sepex_year) + ": " + (str(cogat_overlap)))
-    
-    # # SEARCH IN DSM LEXICON
-    # dsm_prevalence = search_lexicon(abstracts,"lexicon_dsm") # get prevalence of cogat concepts in sepex abstracts
-    # dsm_prevalence_any = dsm_prevalence[dsm_prevalence[0] != 0] # remove rows with zeros (concepts that don't appear in SEPEX abstracts)
-    # dsm_overlap = len(dsm_prevalence_any) / len(dsm_prevalence) # compute overlap between cognitive atlas and SEPEX abstracts
-    # print("Overlap between DSM and SEPEX" + str(sepex_year) + ": " + (str(dsm_overlap)))
-    
-    # # SEARCH IN RDOC LEXICON
-    # rdoc_prevalence = search_lexicon(abstracts,"lexicon_rdoc") # get prevalence of cogat concepts in sepex abstracts
-    # rdoc_prevalence_any = rdoc_prevalence[rdoc_prevalence[0] != 0] # remove rows with zeros (concepts that don't appear in SEPEX abstracts)
-    # rdoc_overlap = len(rdoc_prevalence_any) / len(rdoc_prevalence) # compute overlap between cognitive atlas and SEPEX abstracts
-    # print("Overlap between RDoc and SEPEX" + str(sepex_year) + ": " + (str(rdoc_overlap)))
-    
     
     
     # SEARCH IN COGNITIVE ATLAS sub-LEXICONS
@@ -89,67 +70,108 @@ for idx,sepex_year in enumerate(sepex_editions):
     overlap_weighted.loc[idx,:] = overlap.loc[idx,:] * weights
 
 # plot non-weighted results
+sns.set_style("white")
+sns.set_context("poster",font_scale=0.75,rc={"figure.figsize":(20, 20)})
+
 g = sns.catplot(data=overlap,kind="bar")
 # g.set_xticks(range(len(sepex_editions))) # <--- set the ticks first
 # g.set_xticklabels(sepex_editions)
 g.despine(right=True)
 g.set_axis_labels("", "prevalence across editions")
-plt.savefig(root + 'figures_nospanish/prevalence_across_editions.png')
+g.figure.savefig(root + 'figures_nospanish/prevalence_across_editions.png',dpi=600,bbox_inches="tight")
 
+sns.set_style("white")
+sns.set_context("poster",font_scale=1.5,rc={"figure.figsize":(20, 20)})
 g = sns.lineplot(data=overlap)
 g.set_xticks(range(len(sepex_editions))) # <--- set the ticks first
 g.set_xticklabels(sepex_editions)
 g.set_ylabel("prevalence")
-plt.savefig(root + 'figures_nospanish/prevalence.png')
+g.figure.savefig(root + 'figures_nospanish/prevalence.png',dpi=600,bbox_inches="tight")
 
 
 # plot weighted results
+sns.set_style("white")
+sns.set_context("poster",font_scale=0.75,rc={"figure.figsize":(20, 20)})
+
 g = sns.catplot(data=overlap_weighted,kind="bar")
 # g.set_xticks(range(len(sepex_editions))) # <--- set the ticks first
 # g.set_xticklabels(sepex_editions)
 g.despine(right=True)
 g.set_axis_labels("", "weighted prevalence across editions")
-plt.savefig(root + 'figures_nospanish/w_prevalence_across_editions.png')
+g.figure.savefig(root + 'figures_nospanish/w_prevalence_across_editions.png',dpi=600,bbox_inches="tight")
 
-
+sns.set_style("white")
+sns.set_context("poster",font_scale=1.5,rc={"figure.figsize":(20, 20)})
 g = sns.lineplot(data=overlap_weighted)
 g.set_xticks(range(len(sepex_editions))) # <--- set the ticks first
 g.set_xticklabels(sepex_editions)
 g.set_ylabel("weighted prevalence")
-plt.savefig(root + 'figures_nospanish/w_prevalence.png')
+g.figure.savefig(root + 'figures_nospanish/w_prevalence.png',dpi=600,bbox_inches="tight")
 
+# polar plot
+overlap_weighted['year']= ['2012','2014','2016','2018'] #year
+overlap_weighted.set_index('year', inplace=True)
+# Each attribute we'll plot in the radar chart.
+labels = ['disorders', 'concepts', 'tasks', 'anatomy']
 
-# Word clouds
-# I'm turning this into a function so we can easily plug it for each lexicon
-def draw_wordclod(prevalence_data, fig_name):
-    
-    '''draw_wordclod
-    Input
-    ==========    
-    prevalence_data: dataframe with words as 'index' (row names) and and 
-    prevalence values in the first column
-    fig_name: name of the resulting figure
-    
-    Output
-    ==========    
-    displays and prints figure
-    '''
-    # extract words
-    word_list = prevalence_data.index
-    
-    # put all words into a single variable (needed for the wordcloud)
-    text = str(' ')
-    for idx, word in enumerate(word_list):
-        word = word + ' '
-        text += word * int(prevalence_data[0][idx])
-    
-    # create the wordcloud
-    wordcloud = WordCloud(background_color="white",
-                          collocations=False).generate(text)
+# Let's look at the 2012 sepex and plot it.
+values = overlap_weighted.loc['2012'].tolist()
+# Number of variables we're plotting.
+num_vars = len(labels)
+# Split the circle into even parts and save the angles
+# so we know where to put each axis.
+angles = np.linspace(0, 2 * np.pi, num_vars, endpoint=False).tolist()
 
-    # Display the generated image:
-    # the matplotlib way:
-    plt.figure(figsize=(4,4), dpi=1200)
-    plt.imshow(wordcloud, interpolation='bilinear')
-    plt.axis("off")
-    plt.savefig(root + 'figures/' + fig_name + '.png')
+# The plot is a circle, so we need to "complete the loop"
+# and append the start value to the end.
+values += values[:1]
+angles += angles[:1]
+
+# ax = plt.subplot(polar=True)
+fig, ax = plt.subplots(figsize=(6, 6), subplot_kw=dict(polar=True))
+
+# Helper function to plot each car on the radar chart.
+def add_to_radar(year, color):
+  values = overlap_weighted.loc[year].tolist()
+  values += values[:1]
+  ax.plot(angles, values, color=color, linewidth=1, label=year)
+  ax.fill(angles, values, color=color, alpha=0.25)
+
+add_to_radar('2012', '#1aaf6c')
+add_to_radar('2014', '#429bf4')
+add_to_radar('2016', '#d42cea')
+add_to_radar('2018', 'lightsalmon')
+# Fix axis to go in the right order and start at 12 o'clock.
+ax.set_theta_offset(np.pi / 2)
+ax.set_theta_direction(-1)
+
+# Draw axis lines for each angle and label.
+ax.set_thetagrids(np.degrees(angles[:-1]), labels)
+
+# Go through labels and adjust alignment based on where
+# it is in the circle.
+for label, angle in zip(ax.get_xticklabels(), angles):
+  if angle in (0, np.pi):
+    label.set_horizontalalignment('center')
+  elif 0 < angle < np.pi:
+    label.set_horizontalalignment('left')
+  else:
+    label.set_horizontalalignment('right')
+
+# Set position of y-labels (0-100) to be in the middle
+# of the first two axes.
+ax.set_rlabel_position(180 / num_vars)
+# Add some custom styling.
+# Change the color of the tick labels.
+ax.tick_params(colors='#222222')
+# Make the y-axis (0-100) labels smaller.
+ax.tick_params(axis='y', labelsize=20)
+# Change the color of the circular gridlines.
+ax.grid(color='#AAAAAA')
+# Change the color of the outermost gridline (the spine).
+ax.spines['polar'].set_color('#222222')
+# Change the background color inside the circle itself.
+ax.set_facecolor('#FAFAFA')
+# Add a legend as well.
+ax.legend(bbox_to_anchor=(1.75, 1.45),title="SEPEX year")
+ax.figure.savefig(root + 'figures_nospanish/w_prevalence_polar.png',dpi=600,bbox_inches="tight")

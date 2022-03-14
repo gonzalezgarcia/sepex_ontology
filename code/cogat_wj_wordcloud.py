@@ -11,8 +11,9 @@ import matplotlib.pyplot as plt
 
 
 # get data directory (using getcwd() is needed to support running example in generated IPython notebook)
-root = "/Users/carlos/documents/GitHub/sepex_ontology/"
 root = "/home/javier/git_repos/sepex_ontology/"
+root = "/Users/carlos/documents/GitHub/sepex_ontology/"
+
 
 # Read the whole text.
 df = pd.read_csv(root + 'data/cogat_features.tsv',sep='\t')

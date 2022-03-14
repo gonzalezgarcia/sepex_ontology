@@ -22,13 +22,16 @@ from wordcloud import WordCloud, STOPWORDS
 from cognitiveatlas.api import get_concept
 from googletrans import Translator
 translator = Translator()
+import matplotlib.pyplot as plt
+import numpy as np
 
 # Where are we?
-try:
-    os.chdir(os.path.dirname(sys.argv[0])) # not working for me (carlos)
-except:
-    root = "/Users/carlos/Documents/GitHub/sepex_ontology/"
-    root = "/home/javier/git_repos/sepex_ontology/"
+# try:
+#     os.chdir(os.path.dirname(sys.argv[0])) # not working for me (carlos)
+# except:
+    
+root = "/home/javier/git_repos/sepex_ontology/"
+root = "/Users/carlos/Documents/GitHub/sepex_ontology/"
     
 ###### Poldrack's functions
 # Functions to parse text
@@ -141,7 +144,45 @@ def search_lexicon(input_text,lexicon):
     #print("Found %s total occurrences for %s" %(features.loc[pid].sum(),pid))            
     return features.T
 
+# Word clouds
+# I'm turning this into a function so we can easily plug it for each lexicon
+def draw_wordclod(prevalence_data, fig_name):
+    
+    '''draw_wordclod
+    Input
+    ==========    
+    prevalence_data: dataframe with words as 'index' (row names) and and 
+    prevalence values in the first column
+    fig_name: name of the resulting figure
+    
+    Output
+    ==========    
+    displays and prints figure
+    
+    '''
+    
+    x, y = np.ogrid[:1600, :1600]
+    
+    mask = (x - 800) ** 2 + (y - 800) ** 2 > 800 ** 2
+    mask = 255 * mask.astype(int)
+    # extract words
+    prevalence_data["count"] = prevalence_data[0]
+    prevalence_data["word"] = prevalence_data.index
 
+    data = dict(zip(prevalence_data['word'].tolist(), prevalence_data['count'].tolist()))
+    
+    # create the wordcloud
+    wordcloud = WordCloud(background_color="white",
+                          width=1600,
+                          height=1600, mask=mask).generate_from_frequencies(data)
+
+    # Display the generated image:
+    # the matplotlib way:
+    plt.figure(figsize=(20,20), dpi=300)
+    plt.imshow(wordcloud, interpolation='bilinear')
+    plt.tight_layout(pad=0)
+    plt.axis("off")
+    plt.savefig(root + 'figures/' + fig_name + '.png', bbox_inches='tight')
 
 
     
