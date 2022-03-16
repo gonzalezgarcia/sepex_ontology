@@ -30,9 +30,9 @@ import numpy as np
 #     os.chdir(os.path.dirname(sys.argv[0])) # not working for me (carlos)
 # except:
     
-root = "/home/javier/git_repos/sepex_ontology/"
 root = "/Users/carlos/Documents/GitHub/sepex_ontology/"
-    
+root = "/home/javier/git_repos/sepex_ontology/"
+
 ###### Poldrack's functions
 # Functions to parse text
 def remove_nonenglish_chars(text):

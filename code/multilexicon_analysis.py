@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Wed Dec 22 14:40:45 2021
+# """
+# Created on Wed Dec 22 14:40:45 2021
 
-@author: carlos
-"""
+# @author: carlos
+# """
 
 import pandas as pd
 from wordcloud import WordCloud
@@ -14,7 +14,7 @@ import seaborn as sns
 import numpy as np
 
 root = "/Users/carlos/Documents/GitHub/sepex_ontology/"
-
+root = "/home/javier/git_repos/sepex_ontology/"
 sepex_editions = [2012,2014,2016,2018]
 lexicons = ["disorders","concepts","tasks","anatomy"]
 
@@ -134,6 +134,7 @@ fig, ax = plt.subplots(figsize=(6, 6), subplot_kw=dict(polar=True))
 def add_to_radar(year, color):
   values = overlap_weighted.loc[year].tolist()
   values += values[:1]
+  values = [i/sum(values) for i in values] # Make it a proportion
   ax.plot(angles, values, color=color, linewidth=1, label=year)
   ax.fill(angles, values, color=color, alpha=0.25)
 
@@ -174,4 +175,4 @@ ax.spines['polar'].set_color('#222222')
 ax.set_facecolor('#FAFAFA')
 # Add a legend as well.
 ax.legend(bbox_to_anchor=(1.75, 1.45),title="SEPEX year")
-ax.figure.savefig(root + 'figures_nospanish/w_prevalence_polar.png',dpi=600,bbox_inches="tight")
+ax.figure.savefig(root + 'figures_nospanish/w_prevalence_polar2.png',dpi=600,bbox_inches="tight")
