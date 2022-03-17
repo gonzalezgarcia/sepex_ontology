@@ -11,7 +11,9 @@ import json
 import nltk
 import re
 
-paragraphs = json.load(open("william_james.json","r"))
+root = "/Users/carlos/documents/GitHub/sepex_ontology/"
+
+paragraphs = json.load(open(root + "wj/william_james.json","r"))
 
 # Get all cognitive atlas concepts
 all_concepts = get_concept().json
