@@ -9,7 +9,6 @@ To-do list:
 - (DONE) ~~Select prominent concepts over the years (i.e., SEPEX ontology): need to figure out how to get rid of irrelevant words~~
 - (DONE) ~~visualize prominent concepts in SEPEX, CA and WJ. Maybe word cloud??~~
 - (DONE) ~~Check overlap of SEPEX with cogatlas and other lexicons such as DSM or something more neurosciency~~
-- Assess overlap with classical writings in Psychology and with cognitive atlas. 
-Perhaps, we could have a 3x3  matrix with SEPEX - Cognitive Atlas - William James and % overlap as DV
+- (DONE) ~~Assess overlap with classical writings in Psychology and with cognitive atlas.~~
 - (DONE) ~~Worldcloud for each lexicon - sepex overlap~~
 - final table with OBSERVATION, POTENTIAL INTERPRETATIONS, POTENTIAL STRATEGIES

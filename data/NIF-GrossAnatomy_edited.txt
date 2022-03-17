@@ -1,0 +1,1671 @@
+locomotor function
+electrical sensation
+visceral sensation
+fast pain sensation
+oculomotor function
+olfactory sensation
+lateralized activity
+motor activity
+slow pain sensation
+skeletomotor reflex activity
+skeletomotor reflex function
+sensory system function
+nervous system function
+visual system function
+vestibular system function
+auditory system function
+somatosensory system function
+autonomic nervous system function
+sympathetic nervous system function
+parasympathetic nervous system function
+proprioceptive system function
+kinesthetic sensation
+kinesthetic system function
+gustatory system function
+supracellular structure
+organ
+anatomical entity
+regional part of body
+bio physical immaterial entity
+regional part of body system
+body system
+regional part of organ
+body
+tissue
+bodily fluid
+predominantly gray regional part of preoptic area
+tectopontine tract
+regional part of basal nuclear complex
+pretectal region
+dorsal septal nucleus
+fornix
+medial preoptic nucleus
+trapezoid body
+subthalamus
+predominantly gray regional part of ventral anterior nucleus
+cerebral white matter
+nucleus of anterior commissure
+ventral oculomotor nucleus
+third ventricle
+hippocampal formation
+magnocellular part of ventral anterior nucleus
+regional part of spinal cord central canal
+predominantly gray regional part of inferior colliculus
+nucleus of diagonal band
+magnocellular part of red nucleus
+hippocampus
+parvicellular part of ventral anterior nucleus
+regional part of cervical spinal cord white matter
+bed nucleus of stria terminalis
+parvocellular part of red nucleus
+hippocampus proper
+nucleus accumbens
+ventral posteroinferior nucleus@en ;
+cervical spinal cord lateral column
+septofimbrial nucleus
+anterior column of fornix
+capsule of red nucleus
+pons
+hypothalamus
+lateral occipital cortex
+cervical spinal cord dorsal column
+ventral posterolateral nucleus
+predominantly white regional part of fornix
+body of fornix
+lingual gyrus
+spinothalamic tract of medulla
+regional part of anterior commissure
+ventral posteromedial nucleus
+third cervical spinal cord segment
+trapezoid nuclear complex
+commissure of fornix
+occipital gyrus
+regional part of cerebellum
+thalamic fiber tracts
+tectobulbar tract
+frontal operculum
+second cervical spinal cord segment
+forth cervical spinal cord segment
+posterior column of fornix
+ventral nerve root of sacral spinal cord
+regional part of hippocampal formation
+superior occipital gyrus
+tectospinal tract
+fifth cervical spinal cord segment
+regional part of anterior hypothalamic region
+regional part of midbrain
+paraventricular nucleus of thalamus
+vagal nerve fiber bundle
+sixth cervical spinal cord segment
+regional part of intermediate hypothalamic region
+intermediate acoustic stria
+reuniens nucleus
+regional part of pons
+predominantly gray part of posterior nuclear complex
+seventh cervical spinal cord segment
+lateral lemniscus
+regional part of substantia nigra
+dorsal hypothalamic area
+rhomboidal nucleus
+granular layer of cerebellar cortex
+caudal central oculomotor nucleus
+medial lemniscus of pons
+predominantly gray regional part of substantia nigra
+subfascicular nucleus
+regional part of granular layer of cerebellar cortex
+predominantly white regional part of hypothalamus
+central oculomotor nucleus
+substantia nigra
+inner granular layer of cerebellar cortex
+regional part of lumbar spinal cord dorsal horn
+caudal pontine reticular nucleus
+dorsal oculomotor nucleus
+rostral intralaminar nuclei
+regional part of midbrain tectum
+brain
+outer granular layer of cerebellar cortex
+cingulate gyrus
+central gray substance of pons
+inferior temporal sulcus
+vagus nerve
+lumbar spinal cord gray commissure
+intermediate oculomotor nucleus
+periolivary nucleus
+centromedian nucleus
+inferior colliculus
+parahippocampal gyrus
+predominantly white regional part of tectum
+putamen
+molecular layer of cerebellar cortex
+apex of lumbar spinal cord dorsal horn
+accessory nerve
+medial oculomotor nucleus
+preolivary nucleus
+predominantly gray regional part of tectum
+triangular septal nucleus
+oral part of ventral lateral nucleus
+purkinje cell layer of cerebellar cortex
+substantia gelatinosa of lumbar spinal cord dorsal horn
+hypoglossal nerve
+regional part of inferior frontal gyrus
+parvocellular oculomotor nucleus
+opercular part of inferior frontal gyrus
+pulvinar
+regional part of septal nuclear complex
+basal ganglia
+facial nerve
+lumbar spinal cord lateral column
+predominantly gray regional part of inferior frontal gyrus
+inferior pulvinar nucleus
+predominantly gray regional part of limbic lobe
+predominantly gray regional part of septal nuclear complex
+superficial feature part of telencephalon
+lumbar spinal cord dorsal column
+lateral posterior nucleus
+nerve root part of thoracic spinal cord
+lateral dorsal nucleus
+predominantly white regional part of anterior commissure
+lumbar spinal cord ventral column
+predominantly gray regional part of pulvinar
+regional part of fornix
+nervous system
+ventral nucleus of medial geniculate body
+anterior spinocerebellar tract
+predominantly gray midline regional part of thalamus
+predominantly gray part of intralaminar nuclear group
+predominantly gray regional part of midline nuclear group
+mammillothalamic tract of hypothalamus
+regional part of superior temporal sulcus
+supramammillary commissure
+paratenial nucleus
+inferior central nucleus
+banks of superior temporal sulcus
+nucleus of pretectal area
+mammillary body
+substantia nigra pars lateralis
+nucleus of optic tract
+trigeminal nerve
+nucleus of medial eminence
+fasciculus
+inferior frontal gyrus
+oral pontine reticular nucleus
+abducens nerve
+lumbar spinal cord lateral horn
+cytoarchitectural part of the cerebellar cortex
+lemniscus
+reticulotegmental nucleus
+lumbar spinal cord dorsal horn
+regional part of thoracic spinal cord white matter
+medial lemniscus
+superior central nucleus
+vestibulocochlear nerve
+lumbar spinal cord ventral horn
+segment part of thoracic spinal cord
+dorsal longitudinal fasciculus of midbrain
+dorsal nucleus of lateral lemniscus
+habenulo-interpeduncular tract of midbrain
+nucleus of darkschewitsch
+lateral parabrachial nucleus
+dorsal longitudinal fasciculus of hypothalamus
+glossopharyngeal nerve
+superior olive
+dorsal tegmental decussation
+lateral pes lemniscus
+facial motor nucleus
+flocculonodular lobe
+locus ceruleus
+intermediate part of hypophysis
+alar central lobule
+medial forebrain bundle
+posterior lobe of the cerebellum
+tuberal part of hypophysis
+anterior quadrangular lobule
+postcommissural fornix
+substantia innominata
+accessory nerve fiber bundle
+parvicellular part of ventral posteromedial nucleus
+oral part of ventral posterolateral nucleus
+subcallosal area
+central lobule
+regional part of neurohypophysis
+lobe of cerebral cortex
+pontine tegmentum
+predominantly gray regional part of ventral posteromedial nucleus
+median eminence
+culmen
+principal part of ventral posteromedial nucleus
+frontal lobe
+brachium of inferior colliculus
+regional part of cingulate cortex
+limitans nucleus
+lingula
+predominantly gray regional part of neurohypophysis
+cingulate cortex
+commissure of inferior colliculus
+anterior cingulate cortex
+stria terminalis
+posterior nucleus of thalamus
+gross anatomical part of cerebral cortex
+pars nervosa of hypophysis
+hindbrain
+isthmus of cingulate cortex
+subicular complex
+submedial nucleus
+regional part of limbic lobe
+predominantly gray part of rostral intralaminar nuclei
+regional part of hindbrain
+posterior cingulate cortex
+parafascicular nucleus
+suprageniculate nucleus
+thalamus
+nerve root part of cervical spinal cord
+central dorsal nucleus
+medulla oblongata
+ventral nerve root of cervical spinal cord
+regional part of cerebellar white matter
+regional part of anterior cingulate cortex
+central lateral nucleus
+predominantly gray intralaminal regional part of thalamus
+septum
+dorsal nerve root of cervical spinal cord
+metencephalon
+thoracic spinal cord
+caudal anterior cingulate cortex
+substantia nigra pars reticulata
+anterior commissure anterior part@en ;
+cerebellar penducular complex
+central medial nucleus
+regional part of thoracic spinal cord
+central gray substance of midbrain
+trigeminal nerve fibers
+rostral anterior cingulate cortex
+lateral lemniscus
+posterior part of anterior commissure
+regional part of substantia nigra pars reticulata
+regional part of cerebellar peduncular complex
+thoracic spinal cord gray matter
+paracentral nucleus
+dorsal raphe nucleus
+uncinate fasciculus
+regional part of frontal lobe
+predominantly white regional part of inferior colliculus
+dorsal longitudinal fasciculus
+cytoarchitectural part of the cerebellum
+predominantly gray lateral regional part of thalamus
+regional part of thoracic spinal cord gray matter
+substantia nigra pars compacta
+ventral acoustic stria
+dorsal tegmental nucleus
+regional part of pretectal region
+lateral eminence of hypophysis
+regional part of hypothalamus
+gross anatomical parts of the cerebellum
+predominantly gray regional part of lateral nuclear group
+anterior middle temporal sulcus
+thoracic spinal cord white matter
+interpeduncular nucleus
+ventral trigeminal tract
+predominantly gray regional part of pretectal region
+regional part of adenohypophysis
+anterior hypothalamic region
+parabigeminal nucleus
+interstitial nucleus of cajal
+vestibulocerebellar tract
+mesencephalic nucleus of trigeminal nerve
+anatomical cavity
+rostral sulcus
+predominantly gray regional part of adenohypophysis
+regional part of superior colliculus
+intermediate hypothalamic region
+corticotectal tract
+posterior middle temporal sulcus
+linear nucleus
+organ cavity
+medullary reticular formation
+spur of arcuate sulcus
+distal part of hypophysis
+predominantly white regional part of superior colliculus
+regional part of medullary white matter
+temporal operculum
+posterior commissure
+predominantly white regional part of basal part of pons
+subcommissural organ
+neuraxis cavity
+superior frontal sulcus
+tegmentum
+midbrain tectum
+precommissural fornix
+predominantly gray regional part of dentate nucleus
+central nucleus of inferior colliculus
+lateral orbital gyrus
+olivary pretectal nucleus
+superior precentral sulcus
+regional part of organ cavity
+superior colliculus
+regional part of pontine tegmentum
+cerebrum
+basal part of pons
+amiculum of dentate nucleus
+transverse temporal sulcus
+medial orbital gyrus
+external nucleus of inferior colliculus
+principal pretectal nucleus
+orbital frontal cortex
+pontine reticular formation
+white matter abnormalities
+regional part of inferior olivary complex
+regional part of inner ear
+posterior orbital gyrus
+temporal pole
+pericentral nucleus of inferior colliculus
+sublentiform nucleus@en ;
+regional part orbital frontal cortex
+pericalcarine cortex
+regional part of medullary reticular formation
+predominantly gray regional part of pontine tegmentum
+superficial feature part of cerebral cortex
+inferior transverse frontopolar gyrus
+brachium of superior colliculus
+stria medullaris
+predominantly gray regional part of telencephalon
+regional part of solitary nucleus
+predominantly white regional part of pontine tegmentum
+postcentral gyrus
+predominantly gray regional part of pontine reticular formation
+anterior calcarine sulcus
+commissure of superior colliculus
+medial transverse frontopolar gyrus
+predominantly white regional part of telencephalon
+lobe parts of the cerebellar cortex
+regional part of pontine reticular formation
+regional part of superior olivary complex
+anterior parieto-occipital sulcus
+regional part of vestibular nuclear complex
+central tegmental tract of midbrain
+superior transverse frontopolar gyrus
+caudal middle frontal gyrus
+lobular parts of the cerebellar cortex
+anterior olfactory nucleus
+calcarine sulcus
+corpus callosum
+nucleus subceruleus
+decussation of superior cerebellar peduncle
+rostral middle frontal gyrus
+internal arcuate fiber bundle
+predominantly white regional part of cerebellar cortex
+predominantly gray regional part of frontal lobe
+regional part of a lobe of the cerebellum
+lateral corticospinal tract
+anterior perforated substance
+piriform cortex
+regional part of anterior nucleus of hypothalamus
+central nervous system
+oral part of spinal trigeminal nucleus
+juxtarestiform body
+orbital operculum
+gyrus rectus
+dentatothalamic tract
+white laminae of cerebellum
+vermis
+basal nucleus
+presubiculum
+anterior nucleus of hypothalamus anterior part
+pontine raphe nucleus
+peripheral nervous system
+orbital sulcus
+islands of calleja
+regional part of deep cerebellar nuclear complex
+telencephalon
+ventral posterior nucleus
+insula
+anterior lobe of the cerebellum
+anterior nucleus of hypothalamus central part
+principal sensory nucleus of trigeminal nerve
+paracentral sulcus
+regional part of peripheral nervous system
+autonomic nervous system
+predominantly gray regional part of ventral lateral nucleus
+anterior nucleus of hypothalamus posterior part
+predominantly gray regional part of deep cerebellar nuclear complex
+medial olfactory gyrus
+limbic lobe
+fasciolar gyrus
+posterior superior frontal sulcus
+superior salivatory nucleus
+superior ramus of arcuate sulcus
+sciatic nerve
+regional part of autonomic nervous system
+emboliform nucleus
+occipital lobe
+olfactory bulb
+paraterminal gyrus
+anterior nucleus of hypothalamus dorsal part
+ventral nucleus of lateral lemniscus
+precentral operculum
+superior rostral sulcus
+caudal part of ventral lateral nucleus
+regional part of eye
+fastigial nucleus
+regional part of dentate gyrus
+parietal lobe
+predominantly white regional part of hippocampal formation
+spinothalamic tract of midbrain
+cochlear nuclear complex
+retina
+principal sulcus
+transverse orbital sulcus
+part of nervous system
+globose nucleus
+medial part of ventral lateral nucleus
+temporal lobe
+predominantly gray regional part of hippocampal formation
+superior cerebellar peduncle of midbrain
+ventral tegmental decussation
+inferior olivary complex
+nodulus
+enteric nervous system
+regional part of brain
+regional part of basal part of pons
+eye
+pars postrema of ventral lateral nucleus
+dentate nucleus
+trochlear nerve fibers
+regional part of cerebral cortex
+predominantly gray regional part of epithalamus
+vermal parts of the cerebellum
+habenulo-interpeduncular tract of diencephalon
+regional part of parietal lobe
+dentate gyrus
+regional part of enteric nervous system
+predominantly gray regional part of basal part of pons
+regional part of ear
+regional part of dentate nucleus
+predominantly gray regional part of dentate gyrus
+pineal body
+vermis of the anterior lobe of the cerebellum
+regional part of hippocampus proper
+regional part of occipital lobe
+tuber cinereum
+cochlea
+fascia dentata
+cytoarchitectural fields of hippocampal formation
+predominantly gray regional part of lateral hypothalamic region
+inferior parietal cortex
+regional part of cochlear nuclear complex
+inner ear
+ca1
+predominantly gray regional part of parietal lobe
+lateral hypothalamic nucleus
+midbrain tegmentum
+preoptic periventricular nucleus
+cerebral peduncle
+predominantly white dorsal regional part of medial geniculate body
+ca3
+regional part of caudate nucleus
+lateral tuberal nuclear complex
+orbital part of inferior frontal gyrus
+median preoptic nucleus
+regional part of cerebral peduncle
+predominantly gray regional part of anterior hypothalamic region
+hippocampal molecular layer
+head of caudate nucleus
+predominantly white regional part of cerebral peduncle
+capsule of medial geniculate body
+tail of caudate nucleus
+triangular part of inferior frontal gyrus
+body of caudate nucleus
+cerebral crus
+predominantly white regional part of anterior hypothalamic region
+medial part of medial mammillary nucleus
+predominantly gray regional part of neostriatum
+motor nucleus of trigeminal nerve
+orbital gyri complex
+regional part of globus pallidus
+predominantly gray regional part of ventral nuclear group
+anterior nucleus of hypothalamus
+regional part of midbrain tegmentum
+lateral pulvinar nucleus
+predominantly gray regional part of posterior hypothalamic region
+head
+regional part of orbital gyri complex
+ventral anterior nucleus
+medial pulvinar nucleus
+globus pallidus
+midbrain reticular formation
+predominantly gray regional part of orbital gyri complex
+ventral lateral nucleus
+cuneocerebellar tract
+oral pulvinar nucleus
+oculomotor nuclear complex
+amygdala
+cuneate fasciculus of medulla
+fronto-orbital gyrus
+lateral orbital frontal cortex
+decussation of medial lemniscus
+predominantly gray medial regional part of thalamus
+intermediate orbital gyrus
+infundibular stem
+medial orbital frontal cortex
+dorsal external arcuate fiber bundle
+fifth lumbar spinal cord segment
+predominantly gray regional part of medial dorsal nucleus
+regional part of cerebral ventricular cavity
+regional part of median eminence
+densocellular part of medial dorsal nucleus
+fourth ventricle
+dorsal longitudinal fasciculus of medulla
+transverse frontopolar gyri complex
+dorsal nerve root of lumbar spinal cord
+superficial feature part of midbrain tectum
+cerebral aqueduct
+magnocellular part of medial dorsal nucleus
+lateral ventricle
+anterior median eminence
+regional part of transverse frontopolar gyri complex
+ventral nerve root of lumbar spinal cord
+dorsolateral fasciculus
+superficial feature part of pons
+regional part of central nervous system
+regional part of lateral ventricle
+tuberomammillary nucleus
+predominantly gray regional part of median eminence
+predominantly gray regional part of transverse frontopolar gyri complex
+glossopharyngeal nerve fiber bundle
+sacral spinal cord
+paralaminar part of medial dorsal nucleus
+abducens nerve root
+regional part of parahippocampal gyrus
+anterior horn of lateral ventricle
+posterior median eminence
+regional part of tuberomammillary nucleus
+gracile fasciculus of medulla
+parvicellular part of medial dorsal nucleus
+regional part of sacral spinal cord
+predominantly gray regional part of parahippocampal gyrus
+predominantly gray regional part of metathalamus
+body of lateral ventricle
+hypoglossal nerve fiber bundle
+superficial feature part of intermediate hypothalamic region
+tuberomammillary nucleus dorsal part
+periamygdaloid area
+inferior horn of the lateral ventricle
+predominantly gray dorsal regional part of thalamus
+tuberomammillary nucleus ventral part
+posterior parahippocampal gyrus
+medial lemniscus of midbrain
+posterior horn lateral ventricle
+stratum radiatum
+medial mammillary nucleus
+superior medullary velum
+predominantly white dorsal regional part of thalamus
+medial longitudinal fasciculus of midbrain
+superior frontal gyrus
+composite part spanning multiple base regional parts of brain
+subiculum
+regional part of medial mammillary nucleus
+superior olivary complex
+predominantly white dorsal regional part of metathalamus
+medial pes lemniscus
+superior rostral gyrus
+paraventricular nucleus of the hypothalamus magnocellular division - posterior magnocellular part medial zone
+septal nuclear complex
+lateral part of medial mammillary nucleus
+septal pellucidum
+supracallosal gyrus
+regional part of middle frontal gyrus
+mesencephalic tract of trigeminal nerve
+olfactory nerve
+paraventricular nucleus of the hypothalamus magnocellular division - posterior magnocellular part lateral zone
+lateral septal nucleus
+predominantly gray regional part of medial mammillary nucleus
+oculomotor nerve fibers
+superficial feature part of frontal lobe
+suprachiasmatic nucleus
+lumbar spinal cord ventral commissure
+anterior horizontal limb of lateral sulcus
+optic nerve root
+flocculus
+anterior ascending limb of lateral sulcus
+pallidotegmental fasciculus
+anterior subcentral sulcus
+regional part of paravsuprachiasmatic nucleus
+hemispheric parts of the cerebellar cortex
+oculomotor nerve root
+first lumbar spinal cord segment
+vestibular nuclear complex
+anterior superior frontal sulcus
+hemispheric part of the anterior lobe of the cerebellum
+third lumbar spinal cord segment
+trochlear nerve root
+paraventricular nucleus of the hypothalamus descending division - medial parvicellular part, ventral zone
+predominantly white regional part of medullary white matter
+diagonal sulcus
+second lumbar spinal cord segment
+trigeminal nerve root
+ventral supraoptic decussation
+paraventricular nucleus of the hypothalamus descending division - dorsal parvicellular part
+regional part of medullary raphe nuclear complex
+predominantly gray regional part of anterior nuclear group
+superficial feature part of diencephalon
+forth lumbar spinal cord segment
+hypophysis
+paraventricular nucleus of the hypothalamus descending division - lateral parvicellular part
+regional part of medulla oblongata
+cerebral ventricular cavity
+predominantly gray regional part of medullary raphe nuclear complex
+anterodorsal nucleus
+stratum lacunosum moleculare
+superficial feature part of cerebral peduncle
+regional part of metencephalon
+ca2
+nucleus raphe magnus
+regional part of inferior parietal cortex
+anteromedial nucleus
+abducens nucleus
+regional part of neostriatum
+rhinal sulcus
+nucleus raphe obscurus
+predominantly gray regional part of superior olivary complex
+predominantly gray regional part of inferior parietal cortex
+anteroventral nucleus
+caudate nucleus
+paraventricular nucleus of the hypothalamus descending division - forniceal part
+nucleus raphe pallidus
+angular gyrus
+predominantly white regional part of superior olivary complex
+forth thoracic spinal cord segment
+area x
+regional part of paraventricular nucleus of hypothalamus magnocellular division
+supramarginal gyrus
+regional part of superior olive
+fifth thoracic spinal cord segment
+paraventricular nucleus of the hypothalamus magnocellular division - anterior magnocellular part
+predominantly gray regional part of superior olive
+predominantly gray regional part of occipital lobe
+sixth thoracic spinal cord segment
+paraventricular nucleus of the hypothalamus magnocellular division - medial magnocellular part
+transverse temporal cortex
+suprachiasmatic nucleus dorsomedial part
+annectant gyrus
+seventh thoracic spinal cord segment
+suprachiasmatic nucleus ventrolateral part
+paraventricular nucleus of the hypothalamus magnocellular division - posterior magnocellular part
+thoracic spinal cord central canal
+cuneus cortex
+thoracic spinal cord lateral horn
+eighth thoracic spinal cord segment
+inferior occipital gyrus
+supraoptic crest
+anteroventral periventricular nucleus
+regional part of neuraxis cavity
+regional part of paraventricular nucleus of hypothalamus magnocellular division - posterior magnocellular part
+thoracic spinal cord dorsal horn
+regional part of oculomotor nuclear complex
+regional part of paraventricular nucleus of hypothalamus
+paraventricular nucleus of hypothalamus
+predominantly gray regional part of midbrain reticular formation
+spinal cord central canal@en ;
+thoracic spinal cord ventral horn
+supraoptic nucleus
+predominantly gray regional part of oculomotor nuclear complex
+paraventricular nucleus of the hypothalamus descending division
+medullary white matter
+ventral tegmental area
+optic chiasm
+regional part of thoracic spinal cord dorsal horn
+regional part of red nucleus
+paraventricular nucleus of the hypothalamus magnocellular division
+medullary raphe nuclear complex
+ventral tegmental nucleus
+occipitotemporal sulcus
+regional part of habenula
+anterior hypothalamic commissure
+predominantly gray regional part of red nucleus
+paraventricular nucleus of the hypothalamus parvicellular division
+apex of thoracic spinal cord dorsal horn
+parieto-occipital sulcus
+solitary nucleus
+cuneiform nucleus
+medial habenular nucleus
+substantia gelatinosa of thoracic spinal cord dorsal horn
+dorsal supraoptic decussation
+predominantly white regional part of red nucleus
+regional part of paraventricular nucleus of hypothalamus descending division
+preoccipital notch
+pedunculopontine tegmental nucleus
+lateral habenular nucleus
+thoracic spinal cord lateral column
+supraopticohypophysial tract
+subcuneiform nucleus
+thoracic spinal cord dorsal column
+predominantly gray regional part of habenula
+stratum pyramidale hippocampi
+anterior median oculomotor nucleus
+precuneus cortex
+inferior rostral gyrus
+thoracic spinal cord ventral column
+predominantly gray regional part of hippocampal formation
+superior parietal cortex
+middle frontal gyrus
+first thoracic spinal cord segment
+sacral spinal cord dorsal horn
+second thoracic spinal cord segment
+precentral gyrus
+vagus nerve root
+sacral spinal cord ventral horn
+third thoracic spinal cord segment
+sacral spinal cord gray commissure
+lateral mammillary nucleus
+metathalamus
+midline nuclear group
+posterior nucleus of hypothalamus
+pyramidal tract
+predominantly gray regional part of midbrain tegmentum
+posterior periventricular nucleus
+posterior nuclear complex
+cingulate sulcus
+dorsal nerve root of sacral spinal cord
+nucleus of posterior commissure
+reticulospinal tract
+predominantly white regional part of midbrain tegmentum
+premammillary nucleus
+peripeduncular nucleus
+circular sulcus of insula
+rubrospinal tract
+spinal trigeminal tract of medulla
+red nucleus
+supramammillary nucleus
+collateral sulcus
+rostral interstitial nucleus of medial longitudinal fasciculus
+hilus of dentate gyrus
+solitary tract
+spino-olivary tract
+regional part of midbrain reticular formation
+mammillary peduncle
+lateral sulcus
+trochlear nucleus
+cerebellum
+paleodentate of dentate nucleus
+sacral spinal cord gray matter
+mammillary princeps fasciculus
+limen of insula
+cerebral cortex
+regional part of sacral spinal cord gray matter
+regional part of spinal cord
+mammillotegmental fasciculus
+cervical spinal cord
+sacral spinal cord white matter
+medial medullary lamina
+fimbria of hippocampus
+diencephalon
+fasciculus retroflexus
+regional part of cervical spinal cord
+regional part of sacral spinal cord white matter
+predominantly gray regional part of basal nuclear complex
+entorhinal cortex
+forebrain
+alveus
+cervical spinal cord central canal
+segment part of sacral spinal cord
+facial nerve root
+sacral spinal cord dorsal column
+claustral amygdaloid area
+pontine nuclear complex
+regional part of thalamus
+nerve root part of sacral spinal cord
+vestibulocochlear nerve root
+sacral spinal cord ventral column
+cervical spinal cord gray matter
+claustrum
+longitudinal pontine fibers
+predominantly gray anterior regional part of thalamus
+regional part of cervical spinal cord gray matter
+superficial feature part of medulla oblongata
+sacral spinal cord lateral horn
+sacral spinal cord ventral commissure
+middle cerebellar peduncle
+intralaminar nuclear group
+cervical spinal cord white matter
+first sacral spinal cord segment
+glossopharyngeal nerve root
+superior temporal sulcus
+transverse pontine fibers
+predominantly white regional part of posterior hypothalamic region
+lateral nuclear group
+superficial feature part of temporal lobe
+second sacral spinal cord segment
+lateral inferior limiting sulcus
+isthmus of cingulate gyrus
+superficial feature part of posterior hypothalamic region
+medial dorsal nucleus
+third sacral spinal cord segment
+predominantly gray regional part of globus pallidus
+posterior cingulate gyrus
+thoracic spinal cord gray commissure
+forth sacral spinal cord segment
+predominantly white regional part of septum pellucidum
+predominantly gray regional part of cingulate gyrus
+diagonal band
+cervical spinal cord ventral commissure
+fifth sacral spinal cord segment
+lamina of septum pellucidum
+globus pallidus internal segment
+thoracic spinal cord ventral commissure
+anterior commissure
+dorsomedial nucleus of hypothalamus
+lateral olfactory stria
+basal forebrain
+hilum of dentate nucleus
+cerebellar white matter
+ventral amygdalofugal projection
+intermediate periventricular nucleus
+brainstem
+cerebellar cortex
+neodentate part of dentate nucleus
+deep cerebellar nuclear complex
+retrochiasmatic area
+medial lemniscus of medulla
+regional part of cerebellar cortex
+ventromedial nucleus of hypothalamus
+regional part of cerebral white matter
+medial longitudinal fasciculus of medulla
+cerebellar hemisphere
+regional part of hypophysis
+inferior temporal gyrus
+regional part of transverse temporal cortex
+olivocerebellar tract
+accessory nerve root
+adenohypophysis
+anterior transverse termporal area 41
+predominantly gray regional part of lateral geniculate body
+ninth thoracic spinal cord segment
+posterior spinocerebellar tract
+neurohypophysis
+sacral spinal cord lateral column
+hypoglossal nerve root
+posterior transverse termporal area 42
+predorsal bundle
+tenth thoracic spinal cord segment
+predominantly gray regional part of medial geniculate body
+superficial feature part of hypophysis
+pyramidal decussation
+dorsal nucleus of lateral geniculate body
+eleventh thoracic spinal cord segment
+ventral nucleus of lateral geniculate body
+twelfth thoracic spinal cord segment
+regional part of cingulate gyrus
+anterodorsal nucleus of medial geniculate body
+dorsal nerve root of thoracic spinal cord
+regional part of lumbar spinal cord
+anterior cingulate gyrus
+lumbar spinal cord central canal
+regional part of outer ear
+ventral nerve root of thoracic spinal cord
+regional part of epithalamus
+dorsal nucleus of medial geniculate body
+habenular commissure
+globus pallidus external segment
+habenula
+magnocellular nucleus of medial geniculate body
+nerve root part of lumbar spinal cord
+cervical spinal cord gray commissure
+nerve part of peripheral nervous system
+simian fossa
+predominantly white regional part of globus pallidus
+ventral corticospinal tract
+inferior frontal sulcus
+predominantly white regional part of epithalamus
+internal medullary lamina of thalamus
+posterodorsal nucleus of medial geniculate body
+cranial nerve
+lumbar spinal cord gray matter
+regional part of temporal lobe
+accessory medullary lamina
+inferior precentral sulcus
+ventral external arcuate fiber bundle
+basal nuclear complex
+predominantly gray regional part of intermediate hypothalamic region
+regional part of lumbar spinal cord gray matter
+olfactory nerve root
+predominantly gray regional part of temporal lobe
+lateral medullary lamina
+inferior ramus of arcuate sulcus
+vestibulocochlear nerve fiber bundle
+lateral orbital sulcus
+arcuate nucleus of hypothalamus
+lumbar spinal cord white matter
+optic nerve
+fusiform gyrus
+inferior rostral sulcus
+vestibulospinal tract
+medial orbital sulcus
+oculomotor nerve
+regional part of lumbar spinal cord white matter
+superior temporal gyrus
+nerve tract
+middle frontal sulcus
+posterior hypothalamic region
+segment part of lumbar spinal cord
+middle temporal gyrus
+trochlear nerve
+olfactory sulcus
+predominantly gray regional part of hypothalamus
+anterior transverse temporal gyrus
+internal capsule
+cervical spinal cord ventral column
+posterior transverse temporal gyrus
+lateral geniculate body
+olfactory tract
+predominantly gray regional part of ventral posterolateral nucleus
+cervical spinal cord lateral horn
+olivocochlear bundle
+midbrain
+medial septal nucleus
+ventral nuclear group
+medial geniculate body
+predominantly gray regional part of ventral posterior nucleus
+striatum
+cervical spinal cord dorsal horn
+ventral pallidum
+lateral superior olivary nucleus
+midbrain raphe nuclei
+regional part of forebrain
+predominantly white regional part of diencephalon
+predominantly gray regional part of thalamus
+cervical spinal cord ventral horn
+caudal part of ventral posterolateral nucleus
+medial superior olivary nucleus
+central tegmental tract of pons
+optic tract
+regional part of diencephalon
+predominantly white regional part of thalamus
+regional part of lateral hypothalamic region
+segment part of cervical spinal cord
+abducens nerve fibers
+decussation of trochlear nerve
+inferior cerebellar peduncle
+anterior nuclear group
+regional part of septum
+first cervical spinal cord segment
+middle ear
+eighth cervical spinal cord segment
+regional part of posterior hypothalamic region
+dorsal acoustic stria
+regional part of telencephalon
+predominantly gray ventral regional part of thalamus
+rostral migratory stream
+regional part of cervical spinal cord dorsal horn
+lumbar spinal cord
+outer ear
+preoptic area
+dorsal longitudinal fasciculus of pons
+medial longitudinal fasciculus of pons
+spinal cord
+epithalamus
+superior cerebellar peduncle
+predominantly gray posterior regional part of thalamus
+regional part of middle ear
+apex of cervical spinal cord dorsal horn
+regional part of preoptic area
+frontal pole
+motor root of trigeminal nerve
+dorsal trigeminal tract
+spinothalamic tract of pons
+thalamic reticular nucleus
+lateral preoptic nucleus
+substantia gelatinosa of cervical spinal cord dorsal horn
+fronto-orbital sulcus
+spinal trigeminal tract of pons
+superior cerebellar peduncle of pons
+stratum zonale of thalamus
+left parietal lobe
+right parietal lobe
+brodmann partition scheme region
+brodmann area 1
+brodmann area 2
+brodmann area 3
+brodmann area 4
+brodmann area 5
+brodmann area 6
+brodmann area 7
+brodmann area 8
+brodmann area 9
+brodmann area 10
+brodmann area 11
+brodmann area 12
+brodmann area 13
+brodmann area 14
+brodmann area 15
+brodmann area 16
+brodmann area 17
+brodmann area 18
+brodmann area 19
+brodmann area 20
+brodmann area 21
+brodmann area 22
+brodmann area 23
+brodmann area 24
+brodmann area 25
+brodmann area 26
+brodmann area 27
+brodmann area 28
+brodmann area 32
+brodmann area 43
+brodmann area 8a
+brodmann area 29
+brodmann area 30
+brodmann area 31
+brodmann area 33
+brodmann area 34
+brodmann area 35
+brodmann area 36
+brodmann area 37
+brodmann area 38
+brodmann area 39
+brodmann area 40
+brodmann area 41
+brodmann area 42
+brodmann area 44
+brodmann area 45
+brodmann area 46
+brodmann area 47
+left limbic lobe
+right limbic lobe
+left occipital lobe
+right occipital lobe
+left temporal lobe
+right temporal lobe
+right frontal lobe
+left frontal lobe
+sub-lobar region
+left sub-lobar region
+right sub-lobar region
+brodmann area 48
+brodmann area 52
+regional part of retina
+regional part of cochlea
+left cerebral hemisphere
+hemisphere parts of cerebral cortex
+right cerebral hemisphere
+cerebral spinal fluid
+dorsomedial subnucleus of solitary tract
+circuit part of central nervous system
+principal neuronal circuit
+intrinsic neuronal circuit
+sympathetic nervous system
+parasympathetic nervous system
+vestibular organ
+basilar membrane
+basis modioli
+apex of cochlea
+spiral ligament of cochlea
+stria vascularis
+spiral organ of corti
+regional part of basilar membrane
+zona arcuata of basilar membrane of cochlea
+zona pectinata of basilar membrane of cochlea
+regional part of spiral organ of corti
+tectorial membrane of spiral organ of cochlea
+spiral prominence of cochlea
+macula
+regional part of macula
+macula lutea proper
+fovea
+clivus of fovea centralis
+regional part of fovea
+cytoarchitectural part of cerebral cortex
+neocortex
+ganglion part of peripheral nervous system
+vestibular ganglion
+regional part of vestibular ganglion
+superior part of vestibular ganglion
+inferior part of vestibular ganglion
+cochlear canal
+regional part of cochlear canal
+apex of the cochlear canal
+base of the cochlear canal
+cupula of the cochlear canal
+vestibular fissure of the cochlear canal
+terminal part of the cochlear canal
+duct part of cochlear canal
+tympanic canal
+cochlea duct
+vestibular canal
+auditory ganglion
+regional part of cochlear duct
+ventral cochlear nucleus
+predominantly gray part of cochlear nuclear complex
+dorsal cochlear nucleus
+regional part of ventral cochlear nucleus
+predominantly gray part of ventral cochlear nucleus
+anteroventral cochlear nucleus
+posteroventral cochlear nucleus
+regional part of trapezoid nuclear complex
+dorsal nucleus of trapezoid body
+ventral nucleus of trapezoid body
+medial nucleus of trapezoid body
+dorsal root ganglion
+cranial ganglion part of peripheral nervous system
+spinal ganglion part of peripheral nervous system
+cervical dorsal root ganglion
+thoracic dorsal root ganglion
+lumbar dorsal root ganglion
+sacral dorsal root ganglion
+first cervical dorsal root ganglion
+second cervical dorsal root ganglion
+third cervical dorsal root ganglion
+fourth cervical dorsal root ganglion
+fifth cervical dorsal root ganglion
+sixth cervical dorsal root ganglion
+seventh cervical dorsal root ganglion
+eighth cervical dorsal root ganglion
+first thoracic dorsal root ganglion
+second thoracic dorsal root ganglion
+third thoracic dorsal root ganglion
+fourth thoracic dorsal root ganglion
+fifth thoracic dorsal root ganglion
+sixth thoracic dorsal root ganglion
+seventh thoracic dorsal root ganglion
+eighth thoracic dorsal root ganglion
+ninth thoracic dorsal root ganglion
+tenth thoracic dorsal root ganglion
+eleventh thoracic dorsal root ganglion
+twelfth thoracic dorsal root ganglion
+second lumbar dorsal root ganglion
+first lumbar dorsal root ganglion
+third lumbar dorsal root ganglion
+forth lumbar dorsal root ganglion
+fifth lumbar dorsal root ganglion
+first sacral dorsal root ganglion
+second sacral dorsal root ganglion
+third sacral dorsal root ganglion
+forth sacral dorsal root ganglion
+fifth sacral dorsal root ganglion
+predominantly gray part of medulla oblongata
+accessory cuneate nucleus
+arcuate nucleus of medulla
+area postrema
+caudal part of spinal trigeminal nucleus
+central gray substance of medulla
+commissural nucleus of vagus nerve
+cuneate nucleus
+diffuse reticular nucleus
+dorsal motor nucleus of vagus nerve
+gracile nucleus
+hypoglossal nucleus
+inferior salivatory nucleus
+interpolar part of spinal trigeminal nucleus
+lateral pericuneate nucleus
+medial pericuneate nucleus
+medullary anterior horn
+nucleus ambiguus
+nucleus intercalatus
+nucleus prepositus
+parasolitary nucleus
+nucleus intercalatus
+peritrigeminal nucleus
+pontobulbar nucleus
+sublingual nucleus
+supraspinal nucleus
+dorsolateral subnucleus of solitary tract
+predominantly gray part of solitary nucleus
+medial subnucleus of solitary tract
+parvicellular subnucleus of solitary tract
+ventrolateral subnucleus of solitary tract
+axial regional part of spinal cord
+spinal cord lateral horn
+spinal cord dorsal horn
+spinal cord ventral horn
+spinal cord gray commissure
+apex of spinal cord dorsal horn
+regional part of spinal cord dorsal horn
+substantia gelatinosa of spinal cord dorsal horn
+regional part of spinal cord gray commissure
+spinal cord anterior gray commissure
+spinal cord posterior gray commissure
+regional part of amygdala
+basolateral nuclear complex
+corticomedial nuclear complex
+predominantly gray regional part of amygdala
+central amygdaloid nucleus
+intercalated amygdaloid nuclei
+predominantly gray part of basolateral nuclear complex
+regional part of basolateral nuclear complex
+accessory basal amygdaloid nucleus
+lateral amygdaloid nucleus
+regional part of lateral amygdaloid nucleus
+lateral amygdaloid nucleus, dorsolateral part
+lateral amygdaloid nucleus, ventrolateral part
+lateral amygdaloid nucleus, ventromedial part
+basal amygdaloid nucleus
+regional part of basal amygdaloid nucleus
+predominantly gray part of basal amygdaloid nucleus
+lateral part of basal amygdaloid nucleus
+medial part of basal amygdaloid nucleus
+regional part of corticomedial nuclear complex
+anterior amygdaloid area
+predominantly gray part of corticomedial nuclear complex
+cortical amygdaloid nucleus
+medial amygdaloid nucleus
+nucleus of lateral olfactory tract
+olfactory epithelium
+regional part of entorhinal cortex
+olfactory entorhinal cortex
+primary olfactory cortex
+olfactory cortex
+regional part of olfactory cortex
+secondary olfactory cortex
+frontomarginal sulcus
+telodiencephalic fissure
+cistern of lamina terminalis
+chiasmatic cistern
+hippocampal sulcus
+superficial feature part of forebrain
+intermediate frontal sulcus
+regional part of posterior superior frontal sulcus
+medial precentral sulcus
+transverse parietal sulcus
+inferior parietal sulcus
+superior parietal sulcus
+angular sulcus
+transverse occipital sulcus
+superior calcarine sulcus
+posterior calcarine sulcus
+occipital pole
+lunate sulcus
+lateral occipital sulcus
+intralingual sulcus
+inferior occipital sulcus
+inferior calcarine sulcus
+ectocalcarine sulcus
+anterior occipital sulcus
+superficial feature part of occipital lobe
+superior postcentral sulcus
+subparietal sulcus
+posterior subcentral sulcus
+posterior ascending limb of lateral sulcus
+parietal operculum
+marginal sulcus
+intraparietal sulcus
+inferior postcentral sulcus
+postcentral sulcus
+superficial feature part of parietal cortex
+central sulcus
+regional part of inferior colliculus
+lateral hypothalamic area
+medial parabrachial nucleus
+anterior parolfactory sulcus
+callosal sulcus
+longitudinal fissure
+olfactory trigone
+posterior parolfactory sulcus
+terminal nerve
+terminal nerve root
+regional part of longitudinal fissure
+inferior sagittal sulcus
+superior sagittal sulcus
+regional part of calcarine sulcus
+calcarine sulcus (dorsal)
+calcarine sulcus (ventral)
+hadjikhani et al. (1998) visuotopic partition scheme region
+hadjikhani et al. (1998) visuotopic area v1d
+hadjikhani et al. (1998) visuotopic area v1v
+hadjikhani et al. (1998) visuotopic area v2d
+hadjikhani et al. (1998) visuotopic area v2v
+hadjikhani et al. (1998) visuotopic area v3
+hadjikhani et al. (1998) visuotopic area v3a
+hadjikhani et al. (1998) visuotopic area vp
+hadjikhani et al. (1998) visuotopic area v4v
+hadjikhani et al. (1998) visuotopic area v8
+tootell and hadjikhani (2001) loc/lop complex
+press, brewer, dougherty, wade and wandell (2001) visuotopic area v7
+ongur, price, and ferry (2003) prefrontal cortical partition scheme region
+cytoarchitectural part of occipital lobe
+cytoarchitectural part of frontal lobe
+ongur, price, and ferry (2003) area 10p
+ongur, price, and ferry (2003) area 10r
+ongur, price, and ferry (2003) area 10o
+ongur, price, and ferry (2003) area 10m
+ongur, price, and ferry (2003) area 11m
+ongur, price, and ferry (2003) area 47s
+ongur, price, and ferry (2003) area 13b
+ongur, price, and ferry (2003) area 13a
+ongur, price, and ferry (2003) area 14r
+ongur, price, and ferry (2003) area 14c
+ongur, price, and ferry (2003) area 24
+ongur, price, and ferry (2003) area 25
+ongur, price, and ferry (2003) area 32
+ongur, price, and ferry (2003) area g
+ongur, price, and ferry (2003) area prco
+ongur, price, and ferry (2003) area 11l
+ongur, price, and ferry (2003) area 13m
+ongur, price, and ferry (2003) area 13l
+ongur, price, and ferry (2003) area 47l
+ongur, price, and ferry (2003) area 47m
+ongur, price, and ferry (2003) area 47r
+ongur, price, and ferry (2003) area iam
+ongur, price, and ferry (2003) area ial
+ongur, price, and ferry (2003) area iai
+ongur, price, and ferry (2003) area 9
+ongur, price, and ferry (2003) area 10l
+ongur, price, and ferry (2003) area prco
+ongur, price, and ferry (2003) area iapm
+ongur, price, and ferry (2003) area aon
+trigeminal nuclear complex
+trigeminal tract
+regional part of tongue
+gustatory epithelium
+regional part of gustatory epithelium
+taste bud
+lingual papilla
+conical papilla
+filiform papilla
+foliate papilla
+fungiform papilla
+circumvallate papilla
+nigrostriatal tract
+stratum lucidum
+regional part of stratum pyramidale hippocampi
+ca1 stratum pyramidale hippocampi
+ca2 stratum pyramidale hippocampi
+ca3 stratum pyramidale hippocampi
+stratum oriens
+regional part of stratum oriens
+ca2 stratum oriens
+ca1 stratum oriens
+ca3 stratum oriens
+regional part of stratum radiatum
+ca1 stratum radiatum
+ca2 stratum radiatum
+ca3 stratum radiatum
+regional part of stratum lacunosum moleculare
+ca1 stratum lacunosum moleculare
+ca2 stratum lacunosum moleculare
+ca3 stratum lacunosum moleculare
+cytoarchitectural part of dentate gyrus
+dentate gyrus molecular layer
+dentate gyrus polymorphic layer
+dentate gyrus granule cell layer
+trigeminal nucleus
+gustatory epithelium
+regional part of gustatory epithelium
+taste bud
+substantia nigra pars laminaris
+white matter (retired)
+anterior commissure_retired
+dopaminergic system
+visual system
+limbic system
+lip
+choroid plexus ;
+forelimb
+insular lobe ;
+medial ventral tegmental area
+nucleus of cns
+islands of calleja of olfactory tubercle ;
+isla magna of calleja ;
+pretectum@en ;
+primary somatosensory cortex
+primary visual cortex
+primary motor cortex
+periamygdaloid cortex
+nerve root ;
+temporoparietal junction
+anterior limb of internal capsule
+posterior limb of internal capsule
+commissural nucleus of the solitary tract
+fundus striati
+subventricular zone
+primary motor cortex lamina vi
+primary somatosensory cortex lamina vi
+optic recess of third ventricle
+planum polare
+hippocampal formation of gp94
+parabrachial pigmented nucleus
+rostral linear nucleus
+anterior pretectal nucleus@en ;
+afferent role
+body membrane
+endoneurium
+epineurium
+meninx
+perineurium
+dura mater
+leptomeninx
+arachnoid membrane
+pial membrane
+prefrontal cortex
+neural system
+gustatory system
+motor system
+olfactory system
+neocortex layer 1
+neocortex layer 2
+neocortex layer 3
+neocortex layer 4
+neocortex layer 5
+neocortex layer 6
+proprioceptive system
+sensorimotor
+sensory system
+auditory system
+somatosensory system
+vestibular system
+blood vessel
+capillary
+corona radiata
+parasubiculum
+piriform cortex layer 1
+piriform cortex layer 1a
+piriform cortex layer 1b
+piriform cortex layer 2
+piriform cortex layer 2a
+piriform cortex layer 2b
+piriform cortex layer 3
+endopiriform nucleus
+olfactory bulb main mitral cell body layer
+grumose foamy spheroid body
+lamina i of gray matter of spinal cord
+spinal cord grey matter
+somatic peripheral nervous system
+ganglion
+parasympathetic ganglion
+ciliary ganglion
+regional part of nose
+myenteric plexus
+dorsal cap of kooy
+medial accessory olive
+dorsal accessory olive
+basal ganglia of rodent
+caudoputamen
+organum vasculosum lamina terminalis
+subfornical organ
+dopaminergic system
+white matter
+nucleus gigantocellularis
+olfactory bulb (accessory) mitral cell body layer
+subbrachial nucleus
+subbrachial nucleus of mouse of franklin and paxinos 2008
+postrhinal cortex of rodent of burwell et al 1995
+perirhinal cortex
+olfactory bulb main glomerulus
+lamina dissecans of entorhinal cortex
+sommer's sector
+olfactory bulb main olfactory nerve layer
+olfactory bulb main glomerular layer
+telencephalon of primate
+perirhinal cortex of burwell et al 1995
+perirhinal cortex of primate of burwell et al 1995
+telencephalon of rodent
+brain of rodent
+perirhinal cortex of rodent of burwell et al 1995
+vomeronasal nerve
+olfactory bulb main of rodent
+molecular system
+histaminergic system
+catecholamine system
+adrenergic system
+gabaergic system
+glutamatergic system
+serotonergic system
+noradrenergic system
+cholinergic system
+cytoarchitectural part of retina
+retina ganglion cell layer
+retina inner nuclear layer
+retina inner plexiform layer
+cytoarchitectural part of superior colliculus
+superior colliculus superficial gray layer
+bed nuclei of the stria terminalis oval nucleus
+spinocerebellar tract
+olfactory tubercle
+ca1 alveus
+ca3 alveus
+ca3 stratum lucidum
+dorsal striatum
+subthalamic nucleus
+matrix part of body of caudate nucleus
+striosomal part of body of caudate nucleus
+matrix part of head of caudate nucleus
+matrix part of tail of caudate nucleus
+striosomal part of tail of caudate nucleus
+sacral spinal cord central canal
+pineal gland
+part of neuraxis
+ansa lenticularis
+central tegmental tract
+external capsule
+extreme capsule
+lenticular fasciculus
+mammillothalamic tract
+spinothalamic tract
+central cervical spinocerebellar tract
+rostral spinocerebellar tract
+cerebellar serotonergic afferents
+cerebellar corticopontine projection
+cerebellar afferents from the lateral reticular nucleus
+cerebellar noradrenergic afferents
+pontine gray mossy fibers
+reticular mossy fibers
+spinal mossy fibers
+trigeminal mossy fibers
+vestibular mossy fibers
+cerebellar afferents from the paramedian reticular nucleus
+cerebellar afferents from the pontine reticulotegmental nucleus
+regional parts of the hemisphere lobules
+hemispheric lobule ii
+hemispheric lobule iii
+hemispheric lobule iv
+hemispheric lobule v
+hemispheric lobule vi
+hemispheric lobule vii
+hemispheric lobule viia
+hemispheric lobule viibi
+hemispheric lobule viibii
+hemispheric lobule viii
+hemispheric lobule ix
+hemispheric lobule x
+regional parts of the paravermal lobules
+paravermic lobule ii
+paravermic lobule iii
+paravermic lobule iv
+paravermic lobule ix
+paravermic lobule v
+paravermic lobule vi
+paravermic lobule vii
+paravermic lobule viii
+regional parts of the vermal lobules
+vermic lobule i
+vermic lobule ii
+vermic lobule iii
+vermic lobule iv
+vermic lobule v
+vermic lobule vi
+vermic lobule vii
+vermic lobule viia
+vermic lobule viib
+vermic lobule viii
+vermic lobule ix
+vermic lobule x
+cerebellar paravermis
+paravermis parts of the cerebellar cortex
+paravermis of the posterior lobe of the cerebellum
+paravermis of the anterior lobe of the cerebellum
+vermis of the posterior lobe of the cerebellum
+vermis of the flocculonodular lobe of the cerebellum
+interpositus nucleus
+regional parts of the interpositus nucleus
+emboliform nucleus
+globose nucleus
+lateral reticular nucleus
+rostral portion of the medial accessory olive
+principal olivary nucleus
+white matter of the cerebellar cortex
+superficial feature part of the cerebellum
+precentral fissure
+precentral fissure
+primary fissure
+posterior superior fissure
+horizontal fissure
+ansoparamedian fissure
+prepyramidal fissure
+secondary fissure
+posterolateral fissure
+hemispheric part of the flocculonodular lobe of the cerebellum
+hemispheric part of the posterior lobe of the cerebellum
+arbor vitae
+clarke's nuclei
+striatum
+external pallidum
+pallidum
+internal pallidum
+raphe nuclei
+regional part of spinal nerve
+cervical spinal nerve
+dorsal root
+ventral root
+retrorubral area
+regional part of diagonal band
+horizontal limb of the diagonal band
+vertical limb of the diagonal band
+regional part of nucleus accumbens
+core of nucleus accumbens
+shell of nucleus accumbens
+middle temporal area
+regional part of supraoptic nucleus
+principal anterior division of supraoptic nucleus
+tuberal supraoptic nucleus
+circumventricular organ
+regional part of stratum lucidum
+cytoarchitectural part of olfactory bulb
+olfactory bulb main external plexiform layer
+olfactory bulb main granule cell layer
+plexiform layer
+cytoarchitectural part of dorsal tegmental nucleus
+dorsal tegmental nucleus pars dorsalis
+dorsal tegmental nucleus pars ventralis
+olfactory bulb accessory nucleus
+chemoarchitectural part
+chemoarchitectural part of neostriatum
+matrix compartment
+matrix compartment of caudate nucleus
+matrix compartment of putamen
+striosome
+striosomal part of caudate nucleus
+striosomal part of putamen
+aggregate regional part of brain
+regional part of dorsal cochlear nucleus
+cytoarchitectural part of dorsal cochlear nucleus
+granular cell layer of dorsal cochlear nucleus
+commissure
+frontal cortex
+finger
+hand
+molecular layer of entorhinal cortex
+pyramidal layer of entorhinal cortex
+cytoarchitecture of entorhinal cortex
+basis pontis
+extrastriate cortex
+blood brain barrier ;
+cerebellar mossy fiber ;
+superficial to@en ;
