@@ -11,4 +11,4 @@ To-do list:
 - (DONE) ~~Check overlap of SEPEX with cogatlas and other lexicons such as DSM or something more neurosciency~~
 - (DONE) ~~Assess overlap with classical writings in Psychology and with cognitive atlas.~~
 - (DONE) ~~Worldcloud for each lexicon - sepex overlap~~
-- final table with OBSERVATION, POTENTIAL INTERPRETATIONS, POTENTIAL STRATEGIES
+- (DONE) ~~Final table with OBSERVATION, POTENTIAL INTERPRETATIONS, POTENTIAL STRATEGIES~~
