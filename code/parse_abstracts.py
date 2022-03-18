@@ -141,9 +141,12 @@ def search_lexicon(input_text,lexicon):
     # search for each dsm term, take a count
     for concept in features.columns:
         processed_concept = " ".join(processText(str(concept)))
-        features.loc[0,concept] = len(re.findall(processed_concept,input_text))
+        regex = re.compile(r"\b" + processed_concept + r"\b", re.IGNORECASE)
+        features.loc[0,concept] = len(regex.findall(input_text))
     #print("Found %s total occurrences for %s" %(features.loc[pid].sum(),pid))            
     return features.T
+
+
 
 # Word clouds
 # I'm turning this into a function so we can easily plug it for each lexicon
