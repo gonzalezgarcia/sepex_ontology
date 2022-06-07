@@ -24,7 +24,7 @@ root = "/Users/carlos/documents/GitHub/sepex_ontology/"
 
 
 #  create "SEPEX lexicon" by loading abstracts and checking overlap with cogat
-abstracts = read_abstracts(2018)
+abstracts = read_abstracts(2022)
 cogneuro_prevalence = search_lexicon(abstracts,"cognitive-atlas_concepts") # get prevalence of cogat concepts in sepex abstracts
 cogneuro_prevalence_any = cogneuro_prevalence[cogneuro_prevalence[0] != 0]
 
@@ -62,19 +62,19 @@ overlap = (len(prevalence_any) / len(prevalence))*100
 print("Proportion of SEPEX concepts presents in WJ's principles: " + (str(overlap)))
 
 
-df = pd.read_csv(root + 'data/seex_features.tsv',sep='\t')
-df = df.drop('Unnamed: 0', 1) # clean up
-prevalence = df.sum()
-prevalence_any = prevalence.loc[~(prevalence==0)]
+# df = pd.read_csv(root + 'data/sepex_features.csv',sep='\t')
+# df = df.drop('Unnamed: 0', 1) # clean up
+# prevalence = df.sum()
+# prevalence_any = prevalence.loc[~(prevalence==0)]
 
-# compute overlap between cognitive atlas and william james
-overlap = len(prevalence_any) / len(prevalence)
-print("Overlap between CogAtlas and WJ's principles: " + (str(overlap)))
+# # compute overlap between cognitive atlas and william james
+# overlap = len(prevalence_any) / len(prevalence)
+# print("Overlap between CogAtlas and WJ's principles: " + (str(overlap)))
 
-overlap_bio  = 0.1
+overlap_bio  = 0.09
 overlap_cell = 1.05
 
-crossdisciplines = np.array([overlap,overlap_bio,overlap_cell])
+crossdisciplines = np.array([overlap*100,overlap_bio,overlap_cell])
 
 cross_df = pd.DataFrame()
 cross_df["overlap"] = crossdisciplines
@@ -94,7 +94,7 @@ word_list = prevalence_any.index
 
 # compute proportion of sepex-cogat words that are shared with WJ-cogat
 
-sepex_editions = [2012,2014,2016,2018]
+sepex_editions = [2012,2014,2016,2018,2022]
 lexicons = ["concepts"]
 
 overlap = pd.DataFrame(columns=lexicons)
@@ -119,7 +119,7 @@ for idx,sepex_year in enumerate(sepex_editions):
 # plot overlap between WJ and sepex
 
 sns.set_style("white")
-sns.set_context("poster",font_scale=1.5,rc={"figure.figsize":(20, 20)})
+sns.set_context("poster",font_scale=1,rc={"figure.figsize":(20, 20)})
 g = sns.lineplot(data=overlap)
 g.set_xticks(range(len(sepex_editions))) # <--- set the ticks first
 g.set_xticklabels(sepex_editions)
@@ -144,31 +144,31 @@ unique = cogat_prevalence_any[cogat_prevalence_any.index.isin(sepex_remainder)]
 draw_wordclod(shared, 'sepex18_shared_WJ_cloud')
 draw_wordclod(unique, 'sepex18_unique_WJ_cloud')
 
-# extract words
-word_list = prevalence_data.index
+# # extract words
+# word_list = prevalence_data.index
 
-unique["count"] = unique[0]
-unique["word"] = unique.index
+# unique["count"] = unique[0]
+# unique["word"] = unique.index
 
-data = dict(zip(unique['word'].tolist(), unique['count'].tolist()))
+# data = dict(zip(unique['word'].tolist(), unique['count'].tolist()))
 
-wc = WordCloud(width=800, height=400, max_words=200).generate_from_frequencies(data)
+# wc = WordCloud(width=800, height=400, max_words=200).generate_from_frequencies(data)
 
-plt.figure(figsize=(10, 10))
-plt.imshow(wc, interpolation='bilinear')
-plt.axis('off')
-plt.show()
+# plt.figure(figsize=(10, 10))
+# plt.imshow(wc, interpolation='bilinear')
+# plt.axis('off')
+# plt.show()
 
-shared["count"] = shared[0]
-shared["word"] = shared.index
+# shared["count"] = shared[0]
+# shared["word"] = shared.index
 
-data = dict(zip(shared['word'].tolist(), shared['count'].tolist()))
+# data = dict(zip(shared['word'].tolist(), shared['count'].tolist()))
 
-wc = WordCloud(width=800, height=400, max_words=200).generate_from_frequencies(data)
+# wc = WordCloud(width=800, height=400, max_words=200).generate_from_frequencies(data)
 
-plt.figure(figsize=(10, 10))
-plt.imshow(wc, interpolation='bilinear')
-plt.axis('off')
-plt.show()
+# plt.figure(figsize=(10, 10))
+# plt.imshow(wc, interpolation='bilinear')
+# plt.axis('off')
+# plt.show()
 
 

@@ -14,10 +14,10 @@ import seaborn as sns
 import numpy as np
 
 ''' SET UP AND PREALLOCATE ''' 
-root = "/home/javier/git_repos/sepex_ontology/"
+#root = "/home/javier/git_repos/sepex_ontology/"
 root = "/Users/carlos/Documents/GitHub/sepex_ontology/"
 
-sepex_editions = [2012,2014,2016,2018]
+sepex_editions = [2012,2014,2016,2018,2022]
 lexicons = ["disorders","concepts","tasks","anatomy"]
 overlap = pd.DataFrame(columns=lexicons)
 overlap_weighted = pd.DataFrame(columns=lexicons)
@@ -119,7 +119,7 @@ g.figure.savefig(root + 'figures_nospanish/w_prevalence.png',dpi=600,bbox_inches
 labels = ['disorders', 'concepts', 'tasks', 'anatomy']
 overlap_percentage = overlap_weighted.copy()
 overlap_percentage[labels] = overlap_percentage[labels].div(overlap_percentage[labels].sum(axis=1), axis=0).multiply(100)
-overlap_percentage['year']= ['2012','2014','2016','2018'] # add year column
+overlap_percentage['year']= ['2012','2014','2016','2018','2022'] # add year column
 # transform to long format
 overlap_percentage_long = pd.melt(overlap_percentage,
                                   id_vars=['year'],

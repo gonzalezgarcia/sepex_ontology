@@ -105,7 +105,7 @@ def read_abstracts(year):
     text = list() 
     #print("Parsing paragraph %s, %s of %s" %(pid,count,len(paragraphs)))
     for i, page in enumerate(pdf.pages):
-        # print("Reading page %s out of %s" %(i, len(pdf.pages)))
+        print("Reading page %s out of %s" %(i, len(pdf.pages)))
         words = processText(page.extract_text())
         page_text = " ".join(words)
         #page_text = remove_irrelevant_words(page_text)
