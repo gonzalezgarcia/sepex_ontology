@@ -105,7 +105,7 @@ def read_abstracts(year):
     text = list() 
     #print("Parsing paragraph %s, %s of %s" %(pid,count,len(paragraphs)))
     for i, page in enumerate(pdf.pages):
-        print("Reading page %s out of %s" %(i, len(pdf.pages)))
+        #print("Reading page %s out of %s" %(i, len(pdf.pages)))
         words = processText(page.extract_text())
         page_text = " ".join(words)
         #page_text = remove_irrelevant_words(page_text)
@@ -182,11 +182,12 @@ def draw_wordclod(prevalence_data, fig_name):
 
     # Display the generated image:
     # the matplotlib way:
-    plt.figure(figsize=(20,20), dpi=300)
+    #plt.figure(figsize=(20,20), dpi=300)
     plt.imshow(wordcloud, interpolation='bilinear')
     plt.tight_layout(pad=0)
     plt.axis("off")
-    plt.savefig(root + 'figures/' + fig_name + '.png', bbox_inches='tight')
+    #plt.savefig(root + 'figures/' + fig_name + '.png', bbox_inches='tight')
+    return plt
 
 
     

@@ -141,8 +141,8 @@ shared = cogat_prevalence_any[cogat_prevalence_any.index.isin(intersection)]
 
 unique = cogat_prevalence_any[cogat_prevalence_any.index.isin(sepex_remainder)]
 
-draw_wordclod(shared, 'sepex18_shared_WJ_cloud')
-draw_wordclod(unique, 'sepex18_unique_WJ_cloud')
+draw_wordclod(shared, 'sepex22_shared_WJ_cloud')
+draw_wordclod(unique, 'sepex22_unique_WJ_cloud')
 
 # # extract words
 # word_list = prevalence_data.index

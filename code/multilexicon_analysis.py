@@ -12,6 +12,7 @@ import matplotlib.pyplot as plt
 from parse_abstracts import *
 import seaborn as sns
 import numpy as np
+import pingouin as pg
 
 ''' SET UP AND PREALLOCATE ''' 
 #root = "/home/javier/git_repos/sepex_ontology/"
@@ -23,7 +24,11 @@ overlap = pd.DataFrame(columns=lexicons)
 overlap_weighted = pd.DataFrame(columns=lexicons)
 
 ''' PARSE AND COMPARE'''
+cnt = 0
+plt.figure(figsize=(20,20), dpi=300)
+
 for idx,sepex_year in enumerate(sepex_editions):
+    
 
     # Read in abstracts
     print('Reading abstracts ' + str(sepex_year))
@@ -38,14 +43,19 @@ for idx,sepex_year in enumerate(sepex_editions):
     print("Overlap between CogAtlas-DISORDERS and SEPEX" + str(sepex_year) + ": " + (str(cogat_overlap)))
     overlap.loc[idx,"disorders"] = cogat_overlap
     lexicons_length.append(len(cogat_prevalence))
+    cnt += 1
+    plt.subplot(5, 4, cnt)
     draw_wordclod(cogat_prevalence_any, 'sepex' + str(sepex_year) + '_disorders_cloud')
     
+
     cogat_prevalence = search_lexicon(abstracts,"cognitive-atlas_concepts") # get prevalence of cogat concepts in sepex abstracts
     cogat_prevalence_any = cogat_prevalence[cogat_prevalence[0] != 0] # remove rows with zeros (concepts that don't appear in SEPEX abstracts)
     cogat_overlap = len(cogat_prevalence_any) / len(cogat_prevalence) # compute overlap between cognitive atlas and SEPEX abstracts
     print("Overlap between CogAtlas-CONCEPTS and SEPEX" + str(sepex_year) + ": " + (str(cogat_overlap)))
     overlap.loc[idx,"concepts"] = cogat_overlap
     lexicons_length.append(len(cogat_prevalence))
+    cnt += 1
+    plt.subplot(5, 4, cnt)
     draw_wordclod(cogat_prevalence_any, 'sepex' + str(sepex_year) + '_concepts_cloud')
     
     cogat_prevalence = search_lexicon(abstracts,"cognitive-atlas_tasks") # get prevalence of cogat concepts in sepex abstracts
@@ -54,6 +64,8 @@ for idx,sepex_year in enumerate(sepex_editions):
     print("Overlap between CogAtlas-TASKS and SEPEX" + str(sepex_year) + ": " + (str(cogat_overlap)))
     overlap.loc[idx,"tasks"] = cogat_overlap
     lexicons_length.append(len(cogat_prevalence))
+    cnt += 1
+    plt.subplot(5, 4, cnt)
     draw_wordclod(cogat_prevalence_any, 'sepex' + str(sepex_year) + '_tasks_cloud')
     
     # SEARCH IN MD ANATOMY LEXICON
@@ -63,6 +75,8 @@ for idx,sepex_year in enumerate(sepex_editions):
     print("Overlap between NIF-GrossAnatomy and SEPEX" + str(sepex_year) + ": " + (str(cogat_overlap)))
     overlap.loc[idx,"anatomy"] = cogat_overlap
     lexicons_length.append(len(cogat_prevalence))
+    cnt += 1
+    plt.subplot(5, 4, cnt)
     draw_wordclod(cogat_prevalence_any, 'sepex' + str(sepex_year) + '_anatomy_cloud')
     
     # normalize by corpus size
@@ -70,8 +84,14 @@ for idx,sepex_year in enumerate(sepex_editions):
     
     overlap_weighted.loc[idx,:] = overlap.loc[idx,:] * weights
 
-''' PLOT NON-WEIGHTED RESULTS'''
+plt.savefig(root + 'figures/wordclouds_all.png', dpi=600, bbox_inches='tight')
 
+plt.figure(figsize=(20,20), dpi=300)
+draw_wordclod(cogat_prevalence_any, 'sepex' + str(sepex_year) + '_tasks_cloud')
+plt.savefig(root + 'figures/tasks2022.png', dpi=600, bbox_inches='tight')
+
+
+''' PLOT NON-WEIGHTED RESULTS'''
 # average across editions
 g = plt.figure()
 sns.set_style("white")
@@ -91,8 +111,7 @@ g.set_xticklabels(sepex_editions)
 g.set_ylabel("prevalence")
 g.figure.savefig(root + 'figures_nospanish/prevalence.png',dpi=600,bbox_inches="tight")
 
-''' PLOT WEIGHTED RESULTS'''
-
+''' PLOT WEIGHTED RESULTS and do ANOVA'''
 # average across editions
 g = plt.figure()
 sns.set_style("white")
@@ -102,7 +121,30 @@ g.despine(right=True)
 g.set_axis_labels("", "weighted prevalence across editions")
 g.figure.savefig(root + 'figures_nospanish/w_prevalence_across_editions.png',dpi=600,bbox_inches="tight")
 
-# split by editions
+# transform to long for stats purposes
+overlap_weighted_wide = overlap_weighted.copy()
+overlap_weighted_wide["year"] = [2012, 2014, 2016, 2018, 2022]
+overlap_weighted_wide = overlap_weighted_wide.apply(pd.to_numeric)
+
+overlap_weighted_long = pd.melt(overlap_weighted_wide,
+                                id_vars=['year'],
+                                var_name = "lexicon",
+                                value_name = "WPI")
+
+# perform one-way anova
+aov = pg.rm_anova(dv='WPI', within='lexicon',
+                  subject='year', data=overlap_weighted_long, detailed=True,
+                  effsize="np2", correction = True)
+aov.round(3)
+# and post hoc tests
+post_hocs = pg.pairwise_ttests(dv='WPI',
+                               within='lexicon',
+                               subject='year', 
+                               data=overlap_weighted_long,
+                               padjust='bonf',
+                               effsize = 'cohen')
+post_hocs.round(3)
+
 g = plt.figure()
 sns.set_style("white")
 sns.set_context("notebook",font_scale=1.5,rc={"figure.figsize":(20, 20)})
@@ -113,6 +155,7 @@ g.set_ylabel("weighted prevalence")
 g.set_xlabel("year")
 g.get_legend().remove()
 g.figure.savefig(root + 'figures_nospanish/w_prevalence.png',dpi=600,bbox_inches="tight")
+
 
 ''' PLOT RELATIVE RESULTS'''
 # convert to percentage
