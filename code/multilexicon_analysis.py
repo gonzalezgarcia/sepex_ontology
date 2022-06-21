@@ -7,7 +7,6 @@
 # """
 
 import pandas as pd
-from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 from parse_abstracts import *
 import seaborn as sns
@@ -17,6 +16,7 @@ import pingouin as pg
 ''' SET UP AND PREALLOCATE ''' 
 #root = "/home/javier/git_repos/sepex_ontology/"
 root = "/Users/carlos/Documents/GitHub/sepex_ontology/"
+plot_wordlcouds = 0
 
 sepex_editions = [2012,2014,2016,2018,2022]
 lexicons = ["disorders","concepts","tasks","anatomy"]
@@ -24,8 +24,9 @@ overlap = pd.DataFrame(columns=lexicons)
 overlap_weighted = pd.DataFrame(columns=lexicons)
 
 ''' PARSE AND COMPARE'''
-cnt = 0
-plt.figure(figsize=(20,20), dpi=300)
+if plot_wordlcouds:
+    cnt = 0
+    plt.figure(figsize=(20,20), dpi=300)
 
 for idx,sepex_year in enumerate(sepex_editions):
     
@@ -43,9 +44,10 @@ for idx,sepex_year in enumerate(sepex_editions):
     print("Overlap between CogAtlas-DISORDERS and SEPEX" + str(sepex_year) + ": " + (str(cogat_overlap)))
     overlap.loc[idx,"disorders"] = cogat_overlap
     lexicons_length.append(len(cogat_prevalence))
-    cnt += 1
-    plt.subplot(5, 4, cnt)
-    draw_wordclod(cogat_prevalence_any, 'sepex' + str(sepex_year) + '_disorders_cloud')
+    if plot_wordlcouds:
+        cnt += 1
+        plt.subplot(5, 4, cnt)
+        draw_wordclod(cogat_prevalence_any, 'sepex' + str(sepex_year) + '_disorders_cloud')
     
 
     cogat_prevalence = search_lexicon(abstracts,"cognitive-atlas_concepts") # get prevalence of cogat concepts in sepex abstracts
@@ -54,9 +56,10 @@ for idx,sepex_year in enumerate(sepex_editions):
     print("Overlap between CogAtlas-CONCEPTS and SEPEX" + str(sepex_year) + ": " + (str(cogat_overlap)))
     overlap.loc[idx,"concepts"] = cogat_overlap
     lexicons_length.append(len(cogat_prevalence))
-    cnt += 1
-    plt.subplot(5, 4, cnt)
-    draw_wordclod(cogat_prevalence_any, 'sepex' + str(sepex_year) + '_concepts_cloud')
+    if plot_wordlcouds:
+        cnt += 1
+        plt.subplot(5, 4, cnt)
+        draw_wordclod(cogat_prevalence_any, 'sepex' + str(sepex_year) + '_concepts_cloud')
     
     cogat_prevalence = search_lexicon(abstracts,"cognitive-atlas_tasks") # get prevalence of cogat concepts in sepex abstracts
     cogat_prevalence_any = cogat_prevalence[cogat_prevalence[0] != 0] # remove rows with zeros (concepts that don't appear in SEPEX abstracts)
@@ -64,9 +67,10 @@ for idx,sepex_year in enumerate(sepex_editions):
     print("Overlap between CogAtlas-TASKS and SEPEX" + str(sepex_year) + ": " + (str(cogat_overlap)))
     overlap.loc[idx,"tasks"] = cogat_overlap
     lexicons_length.append(len(cogat_prevalence))
-    cnt += 1
-    plt.subplot(5, 4, cnt)
-    draw_wordclod(cogat_prevalence_any, 'sepex' + str(sepex_year) + '_tasks_cloud')
+    if plot_wordlcouds:
+        cnt += 1
+        plt.subplot(5, 4, cnt)
+        draw_wordclod(cogat_prevalence_any, 'sepex' + str(sepex_year) + '_tasks_cloud')
     
     # SEARCH IN MD ANATOMY LEXICON
     cogat_prevalence = search_lexicon(abstracts,"NIF-GrossAnatomy_edited") # get prevalence of cogat concepts in sepex abstracts
@@ -75,20 +79,19 @@ for idx,sepex_year in enumerate(sepex_editions):
     print("Overlap between NIF-GrossAnatomy and SEPEX" + str(sepex_year) + ": " + (str(cogat_overlap)))
     overlap.loc[idx,"anatomy"] = cogat_overlap
     lexicons_length.append(len(cogat_prevalence))
-    cnt += 1
-    plt.subplot(5, 4, cnt)
-    draw_wordclod(cogat_prevalence_any, 'sepex' + str(sepex_year) + '_anatomy_cloud')
+    if plot_wordlcouds:
+        cnt += 1
+        plt.subplot(5, 4, cnt)
+        draw_wordclod(cogat_prevalence_any, 'sepex' + str(sepex_year) + '_anatomy_cloud')
     
-    # normalize by corpus size
-    weights = [x/sum(lexicons_length) for x in lexicons_length]
-    
-    overlap_weighted.loc[idx,:] = overlap.loc[idx,:] * weights
+    # normalize by corpus size  
+    overlap_weighted.loc[idx,:] = overlap.loc[idx,:] / sum(lexicons_length)
 
-plt.savefig(root + 'figures/wordclouds_all.png', dpi=600, bbox_inches='tight')
-
-plt.figure(figsize=(20,20), dpi=300)
-draw_wordclod(cogat_prevalence_any, 'sepex' + str(sepex_year) + '_tasks_cloud')
-plt.savefig(root + 'figures/tasks2022.png', dpi=600, bbox_inches='tight')
+if plot_wordlcouds:
+    plt.savefig(root + 'figures/wordclouds_all.png', dpi=600, bbox_inches='tight')
+    plt.figure(figsize=(20,20), dpi=300)
+    draw_wordclod(cogat_prevalence_any, 'sepex' + str(sepex_year) + '_tasks_cloud')
+    plt.savefig(root + 'figures/tasks2022.png', dpi=600, bbox_inches='tight')
 
 
 ''' PLOT NON-WEIGHTED RESULTS'''
