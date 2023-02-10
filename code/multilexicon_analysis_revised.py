@@ -73,7 +73,7 @@ if plot_wordlcouds:
     plt.savefig(root + 'figures/wordclouds_all.png', dpi=600, bbox_inches='tight')
     plt.figure(figsize=(20,20), dpi=300)
     draw_wordclod(cogat_prevalence_any, 'sepex' + str(sepex_year) + '_tasks_cloud')
-    plt.savefig(root + fig_folder + '/tasks2022.png', dpi=600, bbox_inches='tight')
+    plt.savefig(fig_folder + '/tasks2022.png', dpi=600, bbox_inches='tight')
 
 
 ''' PLOT NON-WEIGHTED RESULTS'''
@@ -84,7 +84,7 @@ sns.set_context("poster",font_scale=0.75,rc={"figure.figsize":(20, 20)})
 g = sns.catplot(data=overlap,kind="bar")
 g.despine(right=True)
 g.set_axis_labels("", "prevalence across editions")
-g.figure.savefig(root + fig_folder + '/prevalence_across_editions.png',dpi=600,bbox_inches="tight")
+g.figure.savefig(fig_folder + '/prevalence_across_editions.png',dpi=600,bbox_inches="tight")
 
 # split by editions
 g = plt.figure()
@@ -94,7 +94,7 @@ g = sns.lineplot(data=overlap)
 g.set_xticks(range(len(sepex_editions))) # <--- set the ticks first
 g.set_xticklabels(sepex_editions)
 g.set_ylabel("prevalence")
-g.figure.savefig(root + fig_folder + '/prevalence.png',dpi=600,bbox_inches="tight")
+g.figure.savefig(fig_folder + '/prevalence.png',dpi=600,bbox_inches="tight")
 
 ''' PLOT Reviewer's 'NON-WEIGHTED RESULTS'''
 # average across editions
@@ -104,7 +104,7 @@ sns.set_context("poster",font_scale=0.75,rc={"figure.figsize":(20, 20)})
 g = sns.catplot(data=overlap_new,kind="bar")
 g.despine(right=True)
 g.set_axis_labels("", "prevalence across editions")
-g.figure.savefig(root + fig_folder + '/reviewer_prevalence_across_editions.png',dpi=600,bbox_inches="tight")
+g.figure.savefig(fig_folder + '/reviewer_prevalence_across_editions.png',dpi=600,bbox_inches="tight")
 
 # split by editions
 g = plt.figure()
@@ -114,7 +114,7 @@ g = sns.lineplot(data=overlap_new)
 g.set_xticks(range(len(sepex_editions))) # <--- set the ticks first
 g.set_xticklabels(sepex_editions)
 g.set_ylabel("prevalence")
-g.figure.savefig(root + fig_folder + '/reviewer_prevalence.png',dpi=600,bbox_inches="tight")
+g.figure.savefig(fig_folder + '/reviewer_prevalence.png',dpi=600,bbox_inches="tight")
 
 
 ''' PLOT Reviewer's WEIGHTED RESULTS'''
@@ -125,7 +125,7 @@ sns.set_context("poster",font_scale=0.75,rc={"figure.figsize":(20, 20)})
 g = sns.catplot(data=overlap_weighted_new,kind="bar")
 g.despine(right=True)
 g.set_axis_labels("", "Reviewer weighting prevalence across editions")
-g.figure.savefig(root + fig_folder + '/reviewer_w_prevalence_across_editions.png',dpi=600,bbox_inches="tight")
+g.figure.savefig(fig_folder + '/reviewer_w_prevalence_across_editions.png',dpi=600,bbox_inches="tight")
 
 ''' PLOT WEIGHTED RESULTS and do ANOVA'''
 # average across editions
@@ -135,7 +135,7 @@ sns.set_context("poster",font_scale=0.75,rc={"figure.figsize":(20, 20)})
 g = sns.catplot(data=overlap_weighted,kind="bar")
 g.despine(right=True)
 g.set_axis_labels("", "weighted prevalence across editions")
-g.figure.savefig(root + fig_folder + '/w_prevalence_across_editions.png',dpi=600,bbox_inches="tight")
+g.figure.savefig(fig_folder + '/w_prevalence_across_editions.png',dpi=600,bbox_inches="tight")
 
 # transform to long for stats purposes
 overlap_weighted_wide = overlap_weighted.copy()
@@ -171,7 +171,7 @@ g.set_xticklabels(sepex_editions)
 g.set_ylabel("weighted prevalence")
 g.set_xlabel("year")
 g.get_legend().remove()
-g.figure.savefig(root + fig_folder + '/w_prevalence.png',dpi=600,bbox_inches="tight")
+g.figure.savefig(fig_folder + '/w_prevalence.png',dpi=600,bbox_inches="tight")
 
 
 ''' PLOT RELATIVE RESULTS'''
@@ -196,4 +196,4 @@ ax = sns.histplot(overlap_percentage_long,
 legend = ax.get_legend()
 legend.set_bbox_to_anchor((1, 1))
 ax.set_ylabel(" relative prevalence (%)")
-ax.figure.savefig(root + fig_folder + '/w_prevalence_stacked.png',dpi=600,bbox_inches="tight")
+ax.figure.savefig(fig_folder + '/w_prevalence_stacked.png',dpi=600,bbox_inches="tight")
