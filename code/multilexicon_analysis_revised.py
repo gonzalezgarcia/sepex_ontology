@@ -53,7 +53,12 @@ for idx,sepex_year in enumerate(sepex_editions):
         cogat_prevalence = search_lexicon(abstracts,lex_name) # get prevalence of cogat concepts in sepex abstracts
         cogat_prevalence_any = cogat_prevalence[cogat_prevalence[0] != 0] # remove rows with zeros (concepts that don't appear in SEPEX abstracts)
         cogat_overlap = len(cogat_prevalence_any) / len(cogat_prevalence) # compute overlap between cognitive atlas and SEPEX abstracts
-        cogat_overlap_new = len(cogat_prevalence_any) / len(abstracts) # reviewer: proportion of SEPEX terms present in lexicon
+        
+        # find raw concepts in abstracts
+        abstract_concepts = abstracts.split()
+        abstract_concepts = list(dict.fromkeys(abstract_concepts)) # remove duplicates
+
+        cogat_overlap_new = len(cogat_prevalence_any) / len(abstract_concepts) # reviewer: proportion of SEPEX terms present in lexicon
         print("Overlap between " + lex_name + " and SEPEX" + str(sepex_year) + ": " )
         print("New computation: " + str(cogat_overlap_new))
         print("Old computation: " + str(cogat_overlap))
@@ -66,8 +71,11 @@ for idx,sepex_year in enumerate(sepex_editions):
             draw_wordclod(cogat_prevalence_any, 'sepex' + str(sepex_year) + lex_name + '_cloud')
     
     # normalize by corpus size  
-    overlap_weighted.loc[idx,:] = overlap.loc[idx,:] / sum(lexicons_length)
-    overlap_weighted_new.loc[idx,:] = overlap_new.loc[idx,:] / sum(lexicons_length)
+    overlap_weighted.loc[idx,:] = overlap.loc[idx,:] / lexicons_length[idx]
+    # overlap_weighted.loc[idx,:] = overlap.loc[idx,:] / sum(lexicons_length)
+    overlap_weighted_new.loc[idx,:] = overlap_new.loc[idx,:] / lexicons_length[idx]
+    # overlap_weighted_new.loc[idx,:] = overlap_new.loc[idx,:] / sum(lexicons_length)
+    
 
 if plot_wordlcouds:
     plt.savefig(root + 'figures/wordclouds_all.png', dpi=600, bbox_inches='tight')
