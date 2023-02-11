@@ -71,9 +71,9 @@ for idx,sepex_year in enumerate(sepex_editions):
             draw_wordclod(cogat_prevalence_any, 'sepex' + str(sepex_year) + lex_name + '_cloud')
     
     # normalize by corpus size  
-    overlap_weighted.loc[idx,:] = overlap.loc[idx,:] / lexicons_length[idx]
+    overlap_weighted.loc[idx,:] = overlap.loc[idx,:] / lexicons_length[lex_ind]
     # overlap_weighted.loc[idx,:] = overlap.loc[idx,:] / sum(lexicons_length)
-    overlap_weighted_new.loc[idx,:] = overlap_new.loc[idx,:] / lexicons_length[idx]
+    overlap_weighted_new.loc[idx,:] = overlap_new.loc[idx,:] / lexicons_length[lex_ind]
     # overlap_weighted_new.loc[idx,:] = overlap_new.loc[idx,:] / sum(lexicons_length)
     
 
