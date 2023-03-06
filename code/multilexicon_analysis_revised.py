@@ -28,10 +28,11 @@ plot_wordlcouds = 0
 sepex_editions = [2012,2014,2016,2018,2022]
 lexicons = ["disorders","concepts","tasks","anatomy"]
 overlap = pd.DataFrame(columns=lexicons)
-overlap_new = pd.DataFrame(columns=lexicons)
+overlap_rev = pd.DataFrame(columns=lexicons)
 overlap_weighted = pd.DataFrame(columns=lexicons)
 overlap_weighted_new = pd.DataFrame(columns=lexicons)
 overlap_weighted_gpt = pd.DataFrame(columns=lexicons)
+overlap_weighted_gpt_rev = pd.DataFrame(columns=lexicons)
 
 ''' PARSE AND COMPARE'''
 if plot_wordlcouds:
@@ -52,28 +53,31 @@ for idx,sepex_year in enumerate(sepex_editions):
     for lex_ind, lex_name in (enumerate(all_lexicons)):
         
         # SEARCH IN COGNITIVE ATLAS sub-LEXICONS
-        cogat_prevalence = search_lexicon(abstracts,lex_name) # get prevalence of cogat concepts in sepex abstracts
+        cogat_prevalence = search_lexicon(abstracts,lex_name) # get prevalence of lexicon concepts in sepex abstracts
         cogat_prevalence_any = cogat_prevalence[cogat_prevalence[0] != 0] # remove rows with zeros (concepts that don't appear in SEPEX abstracts)
-        cogat_overlap = len(cogat_prevalence_any) / len(cogat_prevalence) # compute overlap between cognitive atlas and SEPEX abstracts
         
         # find raw concepts in abstracts
         abstract_concepts = abstracts.split()
         abstract_concepts = list(dict.fromkeys(abstract_concepts)) # remove duplicates
-
-        cogat_overlap_new = len(cogat_prevalence_any) / len(abstract_concepts) # reviewer: proportion of SEPEX terms present in lexicon
         
+        # compute overlaps
+        cogat_overlap = len(cogat_prevalence_any) / len(cogat_prevalence) # proportion of SEPEX terms in lexicon
+        cogat_overlap_rev = len(cogat_prevalence_any) / len(abstract_concepts) # reviewer: proportion of lexicon terms present in SEPEX abstracts
+        
+        # store
         overlap.loc[idx,lexicons[lex_ind]] = cogat_overlap
-        overlap_new.loc[idx,lexicons[lex_ind]] = cogat_overlap_new
+        overlap_rev.loc[idx,lexicons[lex_ind]] = cogat_overlap_rev
         lexicons_length.append(len(cogat_prevalence))
         
-        # normalize by corpus size  
+        # normalize by corpus size
         overlap_weighted.loc[idx,lexicons[lex_ind]] = overlap.iloc[idx,lex_ind] / lexicons_length[lex_ind]
         # overlap_weighted.loc[idx,:] = overlap.loc[idx,:] / sum(lexicons_length)
-        overlap_weighted_new.loc[idx,lexicons[lex_ind]] = overlap_new.iloc[idx,lex_ind] / lexicons_length[lex_ind]
-        # overlap_weighted_new.loc[idx,:] = overlap_new.loc[idx,:] / sum(lexicons_length)
+        # overlap_weighted_new.loc[idx,lexicons[lex_ind]] = overlap_rev.iloc[idx,lex_ind] / lexicons_length[lex_ind]
+        # overlap_weighted_new.loc[idx,:] = overlap_rev.loc[idx,:] / sum(lexicons_length)
        
         # new weighted prevalence
         overlap_weighted_gpt.loc[idx,lexicons[lex_ind]] = overlap.iloc[idx,lex_ind] / len(abstract_concepts) * (1 / np.sqrt(lexicons_length[lex_ind]))
+        #overlap_weighted_gpt_rev.loc[idx,lexicons[lex_ind]] = overlap_rev.iloc[idx,lex_ind] / len(abstract_concepts) * (1 / np.sqrt(lexicons_length[lex_ind]))
         
         if plot_wordlcouds:
             cnt += 1
@@ -82,8 +86,8 @@ for idx,sepex_year in enumerate(sepex_editions):
     
         
     print("weighted index: " + str(overlap_weighted))
-    print("reviewer's weighted index': " + str(overlap_weighted_new))
     print("chat gpt's weighted index': " + str(overlap_weighted_gpt))
+    print("reviewer's index': " + str(overlap_rev))
     
 
 if plot_wordlcouds:
@@ -118,31 +122,20 @@ g.figure.savefig(fig_folder + '/prevalence.png',dpi=600,bbox_inches="tight")
 g = plt.figure()
 sns.set_style("white")
 sns.set_context("poster",font_scale=0.75,rc={"figure.figsize":(20, 20)})
-g = sns.catplot(data=overlap_new,kind="bar")
+g = sns.catplot(data=overlap_rev,kind="bar")
 g.despine(right=True)
 g.set_axis_labels("", "prevalence across editions")
-g.figure.savefig(fig_folder + '/reviewer_prevalence_across_editions.png',dpi=600,bbox_inches="tight")
+g.figure.savefig(fig_folder + '/prevalence_across_editions_reviewer.png',dpi=600,bbox_inches="tight")
 
 # split by editions
 g = plt.figure()
 sns.set_style("white")
 sns.set_context("notebook",font_scale=1.5,rc={"figure.figsize":(20, 20)})
-g = sns.lineplot(data=overlap_new)
+g = sns.lineplot(data=overlap_rev)
 g.set_xticks(range(len(sepex_editions))) # <--- set the ticks first
 g.set_xticklabels(sepex_editions)
 g.set_ylabel("prevalence")
-g.figure.savefig(fig_folder + '/reviewer_prevalence.png',dpi=600,bbox_inches="tight")
-
-
-''' PLOT Reviewer's WEIGHTED RESULTS'''
-# average across editions
-g = plt.figure()
-sns.set_style("white")
-sns.set_context("poster",font_scale=0.75,rc={"figure.figsize":(20, 20)})
-g = sns.catplot(data=overlap_weighted_new,kind="bar")
-g.despine(right=True)
-g.set_axis_labels("", "Reviewer weighting prevalence across editions")
-g.figure.savefig(fig_folder + '/reviewer_w_prevalence_across_editions.png',dpi=600,bbox_inches="tight")
+g.figure.savefig(fig_folder + '/prevalence_reviewer.png',dpi=600,bbox_inches="tight")
 
 ''' PLOT chat-GPT's WEIGHTED RESULTS'''
 # average across editions
@@ -151,8 +144,8 @@ sns.set_style("white")
 sns.set_context("poster",font_scale=0.75,rc={"figure.figsize":(20, 20)})
 g = sns.catplot(data=overlap_weighted_gpt,kind="bar")
 g.despine(right=True)
-g.set_axis_labels("", "weighted prevalence across editions")
-g.figure.savefig(fig_folder + '/new_w_prevalence_across_editions.png',dpi=600,bbox_inches="tight")
+g.set_axis_labels("", "weighted overlap across editions")
+g.figure.savefig(fig_folder + '/w_prevalence_across_editions_gpt.png',dpi=600,bbox_inches="tight")
 
 ''' PLOT WEIGHTED RESULTS and do ANOVA'''
 # average across editions
@@ -210,8 +203,7 @@ g.set_xticklabels(sepex_editions)
 g.set_ylabel("weighted prevalence")
 g.set_xlabel("year")
 g.get_legend().remove()
-g.figure.savefig(fig_folder + '/new_w_prevalence.png',dpi=600,bbox_inches="tight")
-
+g.figure.savefig(fig_folder + '/w_prevalence_gpt.png',dpi=600,bbox_inches="tight")
 
 
 ''' PLOT RELATIVE RESULTS'''
@@ -260,4 +252,28 @@ ax = sns.histplot(overlap_percentage_long,
 legend = ax.get_legend()
 legend.set_bbox_to_anchor((1, 1))
 ax.set_ylabel(" relative prevalence (%)")
-ax.figure.savefig(fig_folder + '/new_w_prevalence_stacked.png',dpi=600,bbox_inches="tight")
+ax.figure.savefig(fig_folder + '/w_prevalence_stacked_gpt.png',dpi=600,bbox_inches="tight")
+
+''' PLOT REVIWER RELATIVE RESULTS'''
+# convert to percentage
+labels = ['disorders', 'concepts', 'tasks', 'anatomy']
+overlap_percentage = overlap_rev.copy()
+overlap_percentage[labels] = overlap_percentage[labels].div(overlap_percentage[labels].sum(axis=1), axis=0).multiply(100)
+overlap_percentage['year']= ['2012','2014','2016','2018','2022'] # add year column
+# transform to long format
+overlap_percentage_long = pd.melt(overlap_percentage,
+                                  id_vars=['year'],
+                                  value_vars=labels,
+                                  var_name='lexicon',
+                                  value_name='percentage')
+
+# plot stacked bar plot
+g = plt.figure()
+sns.set_style("white")
+sns.set_context("notebook",font_scale=1.5,rc={"figure.figsize":(20, 20)})
+ax = sns.histplot(overlap_percentage_long,
+                  x='year', hue='lexicon', weights='percentage', multiple='stack', shrink=0.8)
+legend = ax.get_legend()
+legend.set_bbox_to_anchor((1, 1))
+ax.set_ylabel(" relative prevalence (%)")
+ax.figure.savefig(fig_folder + '/w_prevalence_stacked_reviewer.png',dpi=600,bbox_inches="tight")
